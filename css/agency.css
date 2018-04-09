@@ -157,7 +157,7 @@ img::-moz-selection {
   #mainNav.navbar-shrink {
     padding-top: 0;
     padding-bottom: 0;
-    background-color: #249e98;
+    background-color: #043077;
   }
   #mainNav.navbar-shrink .navbar-brand {
     font-size: 1.25em;
@@ -169,7 +169,7 @@ header.masthead {
   text-align: center;
   color: white;
   //background-image: url("../img/header-bg.jpg");
-  background-color: #249e98;
+  background-color: #043077;
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
