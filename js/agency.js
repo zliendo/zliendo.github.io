@@ -27,8 +27,13 @@
   });
 
   // Collapse Navbar
+  function scrollY() {
+		return window.pageYOffset || docElem.scrollTop;
+}
   var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
+  	var sy = scrollY();
+    //if ($("#mainNav").offset().top > 100) {
+	if ( sy >= 100 ) {
       $("#mainNav").addClass("navbar-shrink");
     } else {
       $("#mainNav").removeClass("navbar-shrink");
