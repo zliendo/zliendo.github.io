@@ -139,6 +139,8 @@ img::-moz-selection {
   color: #fed136;
 }
 
+.rwd-line { white-space:nowrap;  }
+
 @media (min-width: 992px) {
   #mainNav {
     padding-top: 5px;
@@ -215,6 +217,8 @@ header.masthead .intro-text .intro-heading {
 }
 
 @media (min-width: 768px) {
+
+
   header.masthead .intro-text {
     //padding-top: 300px;
     //padding-bottom: 200px;
