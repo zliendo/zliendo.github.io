@@ -37,6 +37,7 @@ section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
   margin-bottom: 15px;
+  color: #043077;
 }
 
 section h3.section-subheading {
@@ -178,8 +179,8 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   //color: white;
-  color: #043077;
-  background-image: url("../img/er1b.jpg");
+  color: #052252;
+  background-image: url("../img/erc.jpg");
   //background-color: #043077;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -222,8 +223,8 @@ header.masthead .intro-text .intro-heading {
   header.masthead .intro-text {
     //padding-top: 300px;
     //padding-bottom: 200px;
-	padding-top: 100px;
-    padding-bottom: 50px;
+	padding-top: 80px;
+    padding-bottom: 100px;
 	  text-align: left;
   }
   header.masthead .intro-text .intro-lead-in {

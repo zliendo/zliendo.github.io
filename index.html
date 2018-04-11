@@ -42,7 +42,7 @@
               <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
             </li>
 			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#intro">Intro</a>
+              <a class="nav-link js-scroll-trigger" href="#intro">Overview</a>
             </li>
 		  
             <li class="nav-item">
@@ -77,20 +77,15 @@
 		
 		 <div class="row">
 	
-	
 		   <div class="col-md-4">
              <img src = "img/ersign.jpg" width="320" height="225" class = "rounded"></img>
 		   </div> 
-
 			
 		<div class="col-md-8">
 		    </div>
 	
 		 </div>
 		 <div class="row">
-		 
-
-		 
 		  <div class="intro-heading service-heading  col-md-8">
 		  
 		       <span class="text-uppercase" >Improving <span class="text-danger" >Emergency Triage</span></br></span>
@@ -104,13 +99,7 @@
 					  <div class="col-md-4">
 		     <!--  <img class="rounded" width="320" height="225" src="img/care.jpg" alt="">-->
 		  </div>
-	
-
-  		  
-	
-		  
-		
-		  
+			  
 		 </div> 
 		</div>
       </div>
@@ -122,21 +111,44 @@
       <div class="container">
         <div class="row">
 		 <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase bg-light">Introduction</h2>
+            <h2 class="section-heading text-uppercase bg-light">Overview</h2>
           </div>
 		</div>
 		
 		 <div class="row">
 		 <div class="col-lg-12 ">
-             <p class="text-muted">Emergency Departments use Triage Ratings to prioritize urgent cases and improve patient outcomes. ESI is a 5 point scale Triage rating. Over 70% of US hospitals used ESI, now translated and used in other countries.</h3>
+             <p class="text-muted">
+			 Triage is the assessment of the degree of urgency or acuity of a patient’s need for treatment. 
+			 This process occurs whenever a patient enters in the emergency department.
+			Prioritizing patients is a challenge for emergency departments all over the world, as departments need 
+			to balance ever-changing patient needs, wait times, and hospital resources. 
+			One significant issue is the inability to quickly distinguish significantly ill patients; 
+			under-triaging these patients can delay time-sensitive treatment. With improved assessments of 
+			ER patient risk and needs, emergency department (ED) nurses can realize improved triage assessments, 
+			reducing the incidence of under-triaging. 
+
+			 </p>
           </div>
 		</div>
 		 <div class="row">
           <div class="col-md-6">
-            <h4 class="service-heading">The Challenge</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. 
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <h4 class="service-heading">The ESI and the Central Problem</h4>
+            <p class="text-muted">
+			The Emergency Severity Index (ESI) is a prioritization tool used by the majority of hospitals in the US, 
+			assessing patient needs based on the severity of the patient’s condition and the anticipated number of 
+			hospital resources needed to complete treatment. Under the ESI guidelines, patients receive a priority rating 
+			from 1 to 5, with 1 being the most urgent.</p>
+			<p class="text-muted"> While the ESI usefully codifies the triage decision-making process, 
+			over-triaging (assigning a lower ESI rating than optimal) and under-triaging remain problems. 
+			Over-triaging means that patients who could wait are given higher priority than necessary, 
+			possibly to the exclusion of more urgent cases. Under-triaging is potentially more serious, 
+			as it implies that the condition of the individual needs more urgent attention than they are slated to receive. 
+			A natural outgrowth of this phenomenon is that the majority of patients are triaged to the middle category, ESI 3. 
+			Overutilization of ESI 3 necessarily means that the other ESI categories are underutilized, 
+			which is especially problematic for patients who need a more urgent category.</p>
+			
+			<p class="text-muted">We found that 39.9% of patients who experienced a critical outcome were correctly assigned 
+			to ESI 1 or ESI 2. Of those who died in the ED, 36% were assigned to ESI 3.</p>
           </div>
           <div class="col-md-6">
          </div>
@@ -147,9 +159,14 @@
               </div>
           <div class="col-md-6">
             <h4 class="service-heading">Solution</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">We are using deep learning models trained on historical emergency department 
+			records to jointly predict which patients are at high risk for critical outcomes, 
+			and how many hospital resources each patient is expected to require. Based on these predictions, 
+			we are able to recommend an ESI prioritization rating, and show the most important factors for this recommendation. 
+			This rating relies on data that ER nurses already collect during triage, so this rating allows nurses to effectively 
+			leverage the collective wisdom of thousands of emergency department cases, without disrupting the flow from triage assessment 
+			to ESI assignment.
+</p>
           </div>
 		 </div>
       </div>
