@@ -407,16 +407,49 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 		 <div class="row ">
               <div class="col-md-12">
             <h4 class="service-heading">Machine Learning Methods</h4>
+			
+			<p class="text-muted">We used a 10 fold cross validation and area under receiver-operator characteristic curve (AUC ROC)  
+			to measure the performance of all our models. We found that AUC ROC was the metric used by published papers performing predictive 
+			modeling with electronic health records (EHR) .  Because the data is imbalance, with most of the samples not resulting on a 
+			critical outcome, we used the class_weight option in all our models which implicitly balance the data.</p>
            
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+			<p class="text-muted"> Our baseline model was the replication of the Logistic Regression model implemented by 
+			<a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>, 
+			which uses the same data source we are using in our model. We replicated the features they built and matched the AUC ROC reported. 
+			This starting baseline allowed us to confirm we are using the correct fields from the CDC files. </p>
+			
+			<p class="text-muted">Our baseline model was the replication of the Logistic Regression (LR) model implemented by Dugas et al. (2016) , 
+			which uses the same data source we are using in our model. We replicated the features they built and matched the AUC ROC reported. 
+			This starting baseline allowed us to confirm we are using the correct fields from the CDC files and establish the metric to improve.			
+			 </p>
+			 
+			 <p class="text-muted">
+			 The next step was adding features that we thought would improve the model performance:  
+			 RFV codes as vectors and some patient medical history data available during triage, and indeed the LR model performance improved. 
+			 Another traditional machine learning model that we tried was a Random forest (RF) which provides a list of feature importance, 
+			 relevant for model interpretation. The RF model performance was lower than the LR model though.  			 
+			  </p>
+			 
+			  <p class="text-muted">
+			 Considering that medical data is not linearly separable and Logistic Regression cannot handle well this type of data, 
+			 we implemented Deep Neural Networks. It is well known that Deep Neural Networks perform better with enough data for training 
+			 and we thought that we had enough data to try. 
+			  </p>
+			  
+			  <p class="text-muted">We started with a Forward Neural Network, feeding the same features used by the Logistic Regression model 
+			  and indeed its performance was higher. Our next model was a FNN that included the training of embedding for 
+			  the Reason for Visit (RFV) codes, performing better than all previous models.
+			  
+			  </p>
+			  
+			  <h5 class="service-heading">Deep Learning Model Interpretation</h5>
+			  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
-			</p>
-			
-			
-			</p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
+          </div>
+			 
           </div>		
-         </div>
+       
 		 
 		 <div class="row ">
 
