@@ -489,8 +489,8 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 			
 			<p class="text-muted">We used a 10 fold cross validation and area under receiver-operator characteristic curve (AUC ROC)  
 			to measure the performance of all our models. We found that AUC ROC was the metric used by published papers performing predictive 
-			modeling with electronic health records (EHR) .  Because the data is imbalance, with most of the samples not resulting on a 
-			critical outcome, we used the class_weight option in all our models which implicitly balance the data.</p>
+			modeling with electronic health records (EHR).  Because the data is imbalance, with most of the samples not resulting on a 
+			critical outcome, we used the class_weight option in all our models which implicitly balanced the data.</p>
 				
           </div>	  
 			 
@@ -511,7 +511,8 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
            
 						<p class="text-muted"> Our baseline model was the replication of the Logistic Regression model implemented by 
 						<a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>, 
-						which uses the same data source we are using in our model. We replicated the features they built and matched the AUC ROC reported. 
+						which uses the same data source (CDC) we are using in our model. We replicated the features they built and matched 
+						the AUC ROC reported. 
 						This starting baseline allowed us to confirm we are using the correct fields from the CDC files. </p>
                   </div>
                 </div>
@@ -526,8 +527,8 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
                   </div>
                   <div class="timeline-body">
                     		     <p class="text-muted">
-			 The next step was adding features that we thought would improve the model performance:  
-			 RFV codes as vectors and some patient medical history data available during triage, and indeed the LR model performance improved. 
+			 The next step was adding features that we thought would improve the model performance, features like the   
+			 RFV codes as vectors and some patient medical history available during triage. The LR model performance improved. 
 			   			 
 			  </p>
 			  </div>
