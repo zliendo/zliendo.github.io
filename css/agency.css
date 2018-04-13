@@ -36,7 +36,7 @@ section {
 section h2.section-heading {
   font-size: 40px;
   margin-top: 0;
-  margin-bottom: 15px;
+  margin-bottom:55px;
   color: #043077;
 }
 
@@ -248,7 +248,7 @@ header.masthead .intro-text .intro-heading {
 }
 
 .service-heading {
-  margin: 15px 0;
+  margin: 25px 0;
   text-transform: none;
 }
 
@@ -720,3 +720,14 @@ ul.social-buttons li a {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
   background-color: #fed136;
 }
+
+// custom 
+
+.top-buffer { margin-top:20px; }
+
+.bottom-buffer { margin-bottom:20px; }
+
+.border-image {
+  border: 3px solid;
+}
+

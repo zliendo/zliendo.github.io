@@ -91,7 +91,7 @@
 		       <span class="text-uppercase" >Improving <span class="text-danger" >Emergency Triage</span></br></span>
 		
 		  		  &nbsp;</br>
-		    Intepretable Deep Neural Network <span class="rwd-line"> with Attention </span> 
+		    Intepretable Deep Attention <span class="rwd-line">Neural Network  </span> 
 
 		    </div>
 
@@ -131,18 +131,18 @@
           </div>
 		</div>
 		
-		<div class="row">
+		<div class="row ">
           <div class="col-md-12 ">
 		           <h4 class="service-heading">The ESI and the Central Problem</h4>
 		  </div>
 		</div>
 		  
 		  
-		 <div class="row">
+		 <div class="row ">
 		  <div class="col-md-4">		  
 		   <img src = "img/esi.jpg"  class = "rounded img-fluid"></img>
           </div>	
-          <div class="col-md-4">
+          <div class="col-md-4 top-buffer">
    
             <p class="text-muted">
 			The Emergency Severity Index (ESI) is a prioritization tool used by the majority of hospitals in the US, 
@@ -166,10 +166,10 @@
                </div> 
 		 </div>
 		 
-		 <div class="row bg-secondary">
-		 	 <div class="col-md-4">
+		 <div class="row" style="background-color:#e3e4e5;">
+		 	 <div class="col-md-4" >
 		 </div>	
-          <div class="col-md-4 bg-secondary">
+          <div class="col-md-4 " style="background-color:#e3e4e5;">
 		  <br/>
 		     <img src = "img/challenge.jpg"  class = "rounded img-fluid"></img>	 <br/>
 			  <br/>
@@ -188,8 +188,11 @@
 			Overutilization of ESI 3 necessarily means that the other ESI categories are underutilized, 
 			which is especially problematic for patients who need a more urgent category.</p>
 				<p class="text-muted">
-			We found that 39.9% of patients who experienced a critical outcome were correctly assigned 
-			to ESI 1 or ESI 2. Of those who died in the ED, 36% were assigned to ESI 3.</p>			
+While the majority of patients did not experience a critical outcome (CO), we can see that the majority of CO patients were assigned to ESI 3.
+The majority of ICU (Intensive Care Unit), OR (Operation Room), and cardiac catheterization patients were likewise assigned to the overutilized ESI 3. 
+We found that 39.9% of patients who experienced a critical outcome were correctly assigned 
+			to ESI 1 or ESI 2. Of those who died in the ED, 36% were assigned to ESI 3 or lower.</p>
+			
 			</div>
 
 		 </div> 
@@ -209,10 +212,10 @@
           <div class="col-md-12">
 		  	<p class="text-muted">
 			<br/>
-			Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-			Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. <br/>
+			The distributions of ESI assignments by critical outcome appear to be similar across metropolitan statistical areas (MSA) and non-MSA, 
+			with the notable exception of a high incidence of OR/cardiac catheterization assignment to ESI 3 in non-MSA areas.  <br/>
 			 <br/>
-			Critical Outcomes Distributed by ESI assigned</p>			
+			Critical Outcomes Distributed by ESI assigned for MSA and non-MSA</p>			
 			</div>
 
 		 </div> 
@@ -226,11 +229,7 @@
 			</div>
 		 <div class="col-md-1">
 		 </div>			
-		 </div> 
-		 
-		 
-	
-		 
+		 </div>  
 
 		  
 
@@ -238,7 +237,7 @@
 		 
 		<div class="row ">
                <div class="col-md-12">
-            <h4 class="service-heading">Solution</h4>
+            <h4 class="service-heading">Approach</h4>
             <p class="text-muted">We are using deep learning models trained on historical emergency department 
 			records to jointly predict which patients are at high risk for critical outcomes, 
 			and how many hospital resources each patient is expected to require. Based on these predictions, 
@@ -284,16 +283,23 @@
          </div>
 		 
 		 <div class="row ">
-
-          <div class="col-md-6">
+          <div class="col-md-12">
             <h4 class="service-heading">GUI vizualizations</h4>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
-          </div>
-          <div class="col-md-6">            
-		  </div>
+          </div>     
          </div>
+		 
+		 <div class="row">
+		 <div class="col-md-1">
+		 </div>
+          <div class="col-md-10">
+			 <img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>
+			</div>
+		 <div class="col-md-1">
+		 </div>			
+		 </div>
 		 
 		 <div class="row ">
           <div class="col-md-6">
@@ -319,51 +325,96 @@
         <div class="row">
           <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase bg-light">Model</h2>
-            <h3 class="section-subheading text-muted">(note: What are the inputs/data, data science/technical approach, and outputs. Results) </h3>
-          </div>
+            </div>
         </div>
-		   <div class="row">
-          <div class="col-md-6">
+		  <div class="row">
+          <div class="col-md-12">
             <h4 class="service-heading">Data Sources</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-			Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-			Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-          <div class="col-md-6">
-          </div>
+            <p class="text-muted">Our modeling data is drawn from the National Hospital Ambulatory Medical Care Survey (NHAMCS), 
+			collected by the Centers for Disease Control (CDC). The data represented therein are comprised of de-identified health records from 1992-2015, 
+			drawn from a national sample of visits to emergency departments, about 24K records a year. An independent investigation of the dataset 
+			by <a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>
+			found the data to be complete and representative. </p>
+			
+			<p class="text-muted">Due to the availability of certain key variables, and to offset issues of population drift in certain health measurements, 
+			we utilized the datasets from 2009-2015 in our modeling. Based on Dugas et al.’s findings, we also excluded non-adults 
+			(younger than 18 years) and cases with unknown age, patients dead on arrival, cases transferred to a psychiatric unit, 
+			and cases for whom the final outcome or prioritization rating were unknown. We believe that the final study cohort of 
+			24,321 patient visits provides data for a nationally representative sample of 141.4 million visits per year.</p>
+          </div>  
 		</div>
+		
+	
 		 
 		<div class="row ">
-		  <div class="col-md-6">
-          </div>
-          <div class="col-md-6">
+	      <div class="col-md-12">
             <h4 class="service-heading">Model Data Items</h4>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
-          </div>
-	
+          </div>	
          </div>
 		 
+		 <div class="row">
+		 <div class="col-md-1">
+		 </div>
+          <div class="col-md-10">
+			 <img src = "img/model_data_elements.jpg"  class = "rounded img-fluid"></img>
+			</div>
+		 <div class="col-md-1">
+		 </div>			
+		 </div>
+		 
+		 
 		 <div class="row ">
-
-          <div class="col-md-6">
+          <div class="col-md-12">
             <h4 class="service-heading">Feature Engineering</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
+            <p class="text-muted">We categorized vital signs by known thresholds of danger that indicate things like low oxygen, 
+			hypothermic temperature, or dangerous heart rate. Normalizing the vital signs scales was critical, 
+			since things like temperature and heart rate have enormously different potential ranges. 
+			</p>
           </div>
-          <div class="col-md-6">            
+		  </div>	
+			
+		  <div class="row ">
+		      <div class="col-md-4 ">   
+                <img src = "img/RFV.jpg"  class = "rounded img-fluid"></img>	</br>
+				(note here about CDC source)			
 		  </div>
+          <div class="col-md-8">
+		 
+		  <h5> Reasons for Visit (RFV) Codes  </h5>
+		   <p class="text-muted">
+			We also grouped the reasons for ED visit (RFV) into categories that indicate some complaints that are known to be dangerous or 
+			high-priority, like fever, shortness of breath, or chest pain. 			 		
+			 A key feature of the RFV codes was that they have a hierarchical coded arrangement; 
+			 we transformed them into vectors in order to capture that hierarchy. 
+			 We additionally translated the RFV codes into their text form, and created text embeddings in order to capture the semantic 
+			 similarities between complaints that would be obvious to a nurse.	 </p>			 
+			
+
+          </div>      
          </div>
 		 
 		 <div class="row ">
-          <div class="col-md-6">
-              </div>
-          <div class="col-md-6">
-            <h4 class="service-heading">Machine Learning Techniques</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+          <div class="col-md-12">
+		  	<p class="text-muted">	
+			  We also flagged diabetes as a condition, as well as the metropolitan location of the ED that each patient visited.
+			   </p>
+		  </div>      
+         </div>
+		  
+		 
+		 <div class="row ">
+              <div class="col-md-12">
+            <h4 class="service-heading">Machine Learning Methods</h4>
+           
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto
+			</p>
+			
+			
+			</p>
           </div>		
          </div>
 		 
