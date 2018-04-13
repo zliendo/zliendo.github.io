@@ -53,6 +53,10 @@
             </li>
 			
 			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#prediction">Prediction</a>
+            </li>
+			
+			<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#apis">APIs</a>
             </li>
 			
@@ -263,9 +267,14 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 	    <div class="row">
           <div class="col-md-6">
             <h4 class="service-heading">AI Model</h4>
-            <p class="text-muted">Use Deep Learning Models to predict criticality and resource requirements with higher accuracy. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-			Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-			Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">As mentioned earlier, the biggest problem with the ESI is that it relies on the triage practitioner’s ability 
+			to make accurate assessments as to the criticality of patients and the number of resources required for their care. 
+			</p>
+			 <p class="text-muted">
+			IDANN helps avoid miscategorization by providing an objective prediction of both of these parameters, thus allowing practitioners 
+			to leverage case history in their decision making. As its name suggests, IDANN utilizes neural networks for its predictions 
+			and pairs them with text embedding and an attention layer for interpretability.
+			</p>
           </div>
           <div class="col-md-6">
           </div>
@@ -276,8 +285,10 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
           </div>
           <div class="col-md-6">
             <h4 class="service-heading">Model Rationale Explanation</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+            <p class="text-muted">While neural networks can have significant performance advantages compared to other models, 
+			especially with large datasets, they suffer from being hard to understand by end-users. 
+			IDANN addresses this by including an attention layer that ranks the importance of the predictors and the reason for visit (RFV) 
+			embeddings. These rankings are then handed back to the requesting application for interpretation</p>
           </div>
 	
          </div>
@@ -285,9 +296,15 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 		 <div class="row ">
           <div class="col-md-12">
             <h4 class="service-heading">GUI vizualizations</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
+            <p class="text-muted">One of the most important aspects of IDANN lies in its ability to explain its decision-making to the end-users. 
+			In medicine, more so than other fields, it is important to ensure that the end-users are able to leverage the advantages provided 
+			by this tool without having to make a leap of faith in trusting in it blindly.
+			</p>
+			<p class="text-muted">
+			IDANN uses sophisticated D3 visualizations to provide the end-user with a concise, easy-to-follow explanation of the 
+			decision-making process. These visualizations will help providers gain confidence in IDANN’s predictions and to take be able 
+			to weigh the relative impact of different predictors on the patient
+			</p>
           </div>     
          </div>
 		 
@@ -306,9 +323,11 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
               </div>
           <div class="col-md-6">
             <h4 class="service-heading">API service</h4>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
+            <p class="text-muted">While an application like IDANN would be valuable on its own, one of its most prominent features is the 
+			ability to embed it into other applications through the use of a REST API. This standard-based approach ensures that EMR 
+			integrations are straightforward, and additional functionality and integrations can be pursued freely. 
+			The use of FHIR helps address data portability and integrity concerns.
+			</p>
           </div>
 		
          </div>
@@ -319,7 +338,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
     </section>
 	
 
-    <!-- Model and Results -->
+    <!-- Data Sources -->
     <section id="model">
       <div class="container">
         <div class="row">
@@ -345,7 +364,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 		</div>
 		
 	
-		 
+		  <!-- Data Items -->
 		<div class="row ">
 	      <div class="col-md-12">
             <h4 class="service-heading">Model Data Items</h4>
@@ -364,7 +383,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 		 </div>			
 		 </div>
 		 
-		 
+		  <!-- Feature Engineering -->
 		 <div class="row ">
           <div class="col-md-12">
             <h4 class="service-heading">Feature Engineering</h4>
@@ -403,7 +422,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 		  </div>      
          </div>
 		  
-		 
+		  <!-- Machine Learning Methods -->
 		 <div class="row ">
               <div class="col-md-12">
             <h4 class="service-heading">Machine Learning Methods</h4>
@@ -547,7 +566,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 		 <div class="row ">
 
           <div class="col-md-6">
-            <h4 class="service-heading">Model Results</h4>
+            <h5 class="service-heading">ML Model Performance Results</h5>
             <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
 			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
@@ -560,14 +579,72 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 	  </div>
     </section>	
 	
-	    <!-- Methods and Results -->
-    <section id="apis">
+	<!-- Prediction -->
+    <section id="prediction">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase bg-light">Prediction</h2>		
+	
+            </div>
+        </div>
+		
+		<div class="row">
+          <div class="col-md-12">
+		  	   <p class="text-muted">
+			The predictor leverages the trained models to generate an ESI rating and associated supporting data.
+				</p>
+				<p class="text-muted">
+				
+			IDANN follows the official definition of ESI as closely as possible to ensure that its use conforms with established emergency department practices, 
+			thus minimizing the implementation risk and allowing for faster deployment with minimal disruption.
+			
+			</br></br>
+			
+			(note: here we explain how the thresholds were calculated, and compare results from new ESI to old ESI)
+			
+			</p>
+		  </div>
+        </div>
+		
+		</div>
+		 </section>	
+		  
+	
+	    <!-- API -->
+    <section id="apis">
+      <div class="container">
+	  
+        <div class="row">
+          <div class="col-lg-12 text-center">
             <h2 class="section-heading text-uppercase bg-light">Apis</h2>
-            <h3 class="section-subheading text-muted">(note: backend to backend, and from Javascript) </h3>
           </div>
+        </div>
+		
+	
+		<div class="row">
+          <div class="col-md-12">
+		    <h5 class="service-heading">REST API</h5>
+		  	   <p class="text-muted">
+		A client application passes a JSON package with all relevant information to the API, 
+		which then executes an instance of the predictor function.
+		The result of the predictor function is then passed back to the API service and ultimately the client application, which will leverage the ESI 
+		as a suggestion and provide visualizations explaining the decision.
+			
+			</p>
+		  </div>
+        </div>
+		
+		<div class="row">
+          <div class="col-md-12">
+		    <h5 class="service-heading">Javascript API</h5>
+		  	   <p class="text-muted">
+.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
+			
+			</p>
+		  </div>
         </div>
 		
 		  </div>
