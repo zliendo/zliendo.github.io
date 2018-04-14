@@ -30,7 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
       <div class="container">
-	      <a class="nav-link js-scroll-trigger" href="#page-top">IDANN Triage</a>
+	     <!-- <a class="nav-item nav-link js-scroll-trigger" href="#page-top">IDANN Triage</a>-->
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -38,9 +38,9 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">	
 			
-			 <!--<li class="nav-item">
+			 <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#page-top">Home</a>
-            </li>  -->
+            </li>  
 			<li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#challenge">Challenge</a>
             </li>
@@ -79,36 +79,29 @@
       <div class="container">
         <div class="intro-text ">
 		
-		 <div class="row">
-	
+		 <div class="row">	
 		   <div class="col-md-3">
              <!--<img src = "img/ersign.jpg" width="320" height="225" class = "rounded"></img>-->
 			 <img src = "img/ersign.jpg" width="256" height="180" class = "rounded"></img>
-		   </div> 
-			
-		<div class="col-md-9">
-		    </div>
-	
+		   </div> 			
+			<div class="col-md-9">
+		    </div>	
 		 </div>
+		 
 		 <div class="row">
-		  <div class="intro-heading service-heading  col-md-8 ">
-		  
-		       <span class="text-uppercase" >Improving </br>
-			   <span class="text-danger" >Emergency Triage</span></br></span>			
-		           <!-- <h4>through </br> 		  	
-		    Intepretable Deep Attention <span class="rwd-line">Neural Networks  </span>  </h4>-->
-		    </div>			
+		  <div class="intro-heading service-heading  col-md-8 "><br/>		  
+		       <span class="text-danger" >IDANN Triage</span>		    
 			<div class="col-md-4">
 		    </div>			  
 		 </div> 
+		 </div>
 		 
 		 <div class="row">
 			<div class=" col-md-6 ">
 		 	   <p class="intro-ttext">
-			   		 IDANN Triage utilizes  </br> 
+			   		 Improving Emergency Triage through  </br> 
 					 interpretable deep attention neural networks</br>
-					 to predict critical patient outcomes and resources, </br>
-					 aiding emergency departments <span class="rwd-line">with patient prioritization. </span>
+					 to predict critical patient outcomes and resources. </span>
 				</p>
 			</div>
 			<div class="col-md-4">
@@ -145,58 +138,104 @@
              <p class="text-muted">
 			 Triage is the assessment of the degree of urgency or acuity of a patient’s need for treatment. 
 			 This process occurs whenever a patient enters in the emergency department.
-			Prioritizing patients is a challenge for emergency departments all over the world, as departments need 
-			to balance ever-changing patient needs, wait times, and hospital resources. 
-			One significant issue is the inability to quickly distinguish significantly ill patients; 
-			under-triaging these patients can delay time-sensitive treatment. With improved assessments of 
-			ER patient risk and needs, emergency department (ED) nurses can realize improved triage assessments, 
-			reducing the incidence of under-triaging. 
+			Prioritizing patients is a challenge for emergency departments all over the world. One significant issue is the inability to quickly distinguish significantly ill patients; 
+			under-triaging these patients can delay time-sensitive treatment. 
 
 			 </p>
           </div>
 		</div>
 		
 		<div class="row ">
-          <div class="col-md-12 text-center">
+          <div class="col-md-12 ">
 		           <h4 class="service-heading">The ESI and the Central Problem</h4>
+
 		  </div>
 		</div>
-		  
+	   <div class="row ">
+          <div class="col-md-12">
+
+		  </div>
+		</div>	
+		
+
 		  
 		 <div class="row ">
-		 	 <div class="col-md-1">
-			 </div>
+		 		  <div class="col-md-8 ">		  
 	
-		  <div class="col-md-4 text-right">		  
-		   <img src = "img/esi.jpg" height="398" width="283"  class = "rounded "></img>
-          </div>	
-          <div class="col-md-5 top-buffer">
-   
-            <p class="text-muted">
-			The ESI is a prioritization tool used by the majority of hospitals in the US, 
-			assessing patient needs based on the severity of the patient’s condition and the anticipated number of 
-			hospital resources needed to complete treatment. Under the ESI guidelines, patients receive a priority rating 
-			from 1 to 5, with 1 being the most urgent.</p>		
-			<p class="text-muted "> While the ESI usefully codifies the triage decision-making process, 
-			over-triaging (assigning a lower ESI rating than optimal) and under-triaging remain problems. 
-			Over-triaging means that patients who could wait are given higher priority than necessary, 
-			possibly to the exclusion of more urgent cases. Under-triaging is potentially more serious, 
-			as it implies that the condition of the individual needs more urgent attention than they are slated to receive. 
-			</p>
+	
+				   <img src = "img/viz2.jpg"   class = "rounded img-fluid img-border-zl" </img></br>
+				   </br>
+          </div>
+	  <div class="col-md-4" >   
+	  		           			<p class="text-muted">
+						Emergency Severity Index (ESI): a prioritization tool used by the majority of hospitals in the US, 
+			  rating patients by severity of condition and resources needed</p>
+
+			<table id="esi-table" class="table table-striped text-muted" style="font-size:12px">
+				<thead>
+				  <tr>
+					<th style="padding:1px">ESI</th>
+					<th></th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>1</td>
+					<td >Life-saving measures needed immediately</td>
+				  </tr>
+				  <tr>
+					<td>2</td>
+					<td>High risk of a time-sensitive critical condition</td>
+				  </tr>
+				  				  <tr>
+					<td> 3</td>
+					<td>Stable, with multiple resources needed for treatment</td>
+				  </tr>
+				  				  <tr>
+					<td> 4</td>
+					<td>Stable, with only one resource needed for treatment</td>
+				  </tr>
+				  				  <tr>
+					<td>5</td>
+					<td>Stable, with no anticipated resource use</td>
+				  </tr>
+
+				</tbody>
+			  </table>
+
+
+
 		  
-		    </div>		
-			
-			 <div class="col-md-1">
-			 </div>
-			
-		
-			
+		    </div>	
+	
+        
 	 
 		 </div>
 	
+			 <div class="row">
+          <div class="col-md-12">
+
+			  		  		<ul class="text-muted">
+
+			  <li>Over-triaging (assigning a more urgent ESI rating than needed) and under-triaging remain problems </li>
+			  <li>Under-triaging is more serious, since it implies that an individual’s condition requires more urgent attention 
+			  than they are queued to receive</li>
+			  <li>So what happens? Overutilization of the middle ESI 3 category</li>
+			</ul>
+			
+				   	<p class="text-muted">	We found that 39.9% of patients who experienced a critical outcome were 
+			correctly assigned to ESI 1 or ESI 2. Of those who died in the ED, 36% were assigned to ESI 3.</p>
+		  
+			<br/>
+			<p class="text-muted">
+	
+</p>
+			
+			</div>
+
+		 </div> 
 		
-		
-		
+	
 		<div class="row style="background-color:#e3e4e5;"">
 		 			   <div class="col-md-5 text-right p-5" style="background-color:#e3e4e5;">
 		   &nbsp;</br>
@@ -221,34 +260,7 @@
 		 
 	
 		 
-		 <div class="row">
-          <div class="col-md-12">
-		  
-			<br/>
-			<p class="text-muted">
-			A natural outgrowth of this phenomenon is that the majority of patients are triaged to the middle category, ESI 3. 
-			Overutilization of ESI 3 necessarily means that the other ESI categories are underutilized, 
-			which is especially problematic for patients who need a more urgent category.</p>
-				<p class="text-muted">
-While the majority of patients did not experience a critical outcome (CO), we can see that the majority of CO patients were assigned to ESI 3.
-The majority of ICU (Intensive Care Unit), OR (Operation Room), and cardiac catheterization patients were likewise assigned to the overutilized ESI 3. 
-We found that 39.9% of patients who experienced a critical outcome were correctly assigned 
-			to ESI 1 or ESI 2. Of those who died in the ED, 36% were assigned to ESI 3 or lower.</p>
-			
-			</div>
 
-		 </div> 
-		
-		 
-		 <div class="row">
-		 <div class="col-md-2">
-		 </div>
-          <div class="col-md-8">
-			 <img src = "img/viz2.jpg"  class = "rounded img-fluid"></img>
-			</div>
-		 <div class="col-md-2">
-		 </div>			
-		 </div> 
 		 
   		  
 
@@ -268,29 +280,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
           </div>
         </div>
 		
-				<div class="row ">
-               <div class="col-md-12 text-center">
-            <h4 class="service-heading">Approach</h4>
-			</div>
-		</div>  		  
-
-		  
-		 
-		<div class="row ">
-			
-			 <div class="col-md-12 ">
-            <p class="text-muted">We are using deep learning models trained on historical emergency department 
-			records to jointly predict which patients are at high risk for critical outcomes, 
-			and how many hospital resources each patient is expected to require. Based on these predictions, 
-			we are able to recommend an ESI prioritization rating, and show the most important factors for this recommendation. 
-			This rating relies on data that ER nurses already collect during triage, so this rating allows nurses to effectively 
-			leverage the collective wisdom of thousands of emergency department cases, without disrupting the flow from triage assessment 
-			to ESI assignment.</p>
-          </div>
-		 </div>
-		
-		
-		
+	
 		
 		
 		  <div class="row text-center">
@@ -300,23 +290,31 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
               <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
             </span>
                 <h4 class="service-heading">AI Model</h4>
-            <p class="text-muted">As mentioned earlier, the biggest problem with the ESI is that it relies on the triage practitioner’s ability 
-			to make accurate assessments as to the criticality of patients and the number of resources required for their care. 
-			IDANN helps avoid miscategorization by providing an objective prediction of both of these parameters, thus allowing practitioners 
-			to leverage case history in their decision making. As its name suggests, IDANN utilizes neural networks for its predictions 
-			and pairs them with text embedding and an attention layer for interpretability.
-			</p>
+					<ul class="text-muted">
+						<li>Utilizes neural networks for its predictions and pairs them with text embeddings. </li>
+						<li>Relies on data that ER nurses already collect during triage, allowing nurses to leverage the collective wisdom 
+						of thousands of emergency department cases, without disrupting the flow from triage assessment to ESI assignment.</li>
+						<li>Helps avoid triage miscategorization by using deep learning models to jointly predict the risk of critical 
+						outcome and the resources needed for each patient.</li>
+					</ul>
 			</div>
           <div class="col-md-6">
             <span class="fa-stack fa-4x">
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span>
-   <h4 class="service-heading">Model Rationale Explanation</h4>
-            <p class="text-muted">While neural networks can have significant performance advantages compared to other models, 
-			especially with large datasets, they suffer from being hard to understand by end-users. 
-			IDANN addresses this by including an attention layer that ranks the importance of the predictors and the reason for visit (RFV) 
-			embeddings. These rankings are then handed back to the requesting application for interpretation</p>         
+			   <h4 class="service-heading">Model Rationale Explanation</h4>
+			   <ul class="text-muted">
+			   				<li>In medicine, it is especially important that end-users are able to take advantage of 
+				machine learning tools in concert with their own expertise.</li>
+			<li>Neural networks often outperform other types of models, especially with large datasets, 
+			but can be hard to understand.</li>
+			<li>IDANN addresses this by including an attention layer.</li>
+			<li>The attention layer ranks the importance of the predictors and the embedded reasons for visit.</li>
+				
+			<li>With these importance rankings, care providers can gain more confidence in IDANN's predictions, 
+				and weigh the relative impact of different predictors for each patient.</li>
+        </ul>
 			</div>
         </div>
 		
@@ -326,14 +324,14 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
             </span>
-             <h4 class="service-heading">GUI vizualizations</h4>
-            <p class="text-muted">One of the most important aspects of IDANN lies in its ability to explain its decision-making to the end-users. 
-			In medicine, more so than other fields, it is important to ensure that the end-users are able to leverage the advantages provided 
-			by this tool without having to make a leap of faith in trusting in it blindly.
-			IDANN uses visualizations to provide the end-user with a concise, easy-to-follow explanation of the 
-			decision-making process. These visualizations will help providers gain confidence in IDANN’s predictions and to take be able 
-			to weigh the relative impact of different predictors on the patient
-			</p>
+             <h4 class="service-heading">JS API and vizualizations</h4>
+			 		   <ul class="text-muted">
+
+				<li>IDANN uses intuitive isualizations to provide concise, easy-to-follow explanations of 
+				the model’s recommendation.</li>
+				<li>(placeholder to explain the JS API)</li>
+	
+					</ul>
 			</div>
           <div class="col-md-6">
             <span class="fa-stack fa-4x">
@@ -341,29 +339,15 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
               <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">API service</h4>
-            <p class="text-muted">While an application like IDANN would be valuable on its own, one of its most prominent features is the 
-			ability to embed it into other applications through the use of a REST API. This standard-based approach ensures that EMR 
-			integrations are straightforward, and additional functionality and integrations can be pursued freely. 
-			The use of FHIR helps address data portability and integrity concerns.
-			</p>     
+			   <ul class="text-muted">
+				<li>IDANN Triage can be embedded in other applications via REST API. </li>
+				<li>This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications.</li>
+				<ul>
 			</div>
         </div>
 		
 	  		 
-		 <div class="row top-buffer ">
-          <div class="col-md-2 top-buffer">
-
-          </div>           
-		 
-          <div class="col-md-8 top-buffer ">
-		  <br/>
-		  <br/>
-			 <img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>
-			</div>
-		         <div class="col-md-2">
-
-          </div>   		
-		 </div>
+		
 		 
 		 
 	  
@@ -543,7 +527,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
                   <div class="timeline-body">
          		  <p class="text-muted">
 			 Considering that medical data is not linearly separable and Logistic Regression cannot handle well this type of data, 
-			 we implemented Deep Neural Networks. It is well known that Deep Neural Networks perform better with enough data for training 
+			 we implemented Deep Neural Networks (DNN). It is well known that DNN perform better with enough data for training 
 			 and we thought that we had enough data to try. 
 			  </p>
 			  
@@ -557,12 +541,13 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">                   
-                    <h5 class="subheading">Forward Neural Network (FNN)</h5>
+                    <h5 class="subheading">Forward Neural Network (FNN) with text Embeddings</h5>
                   </div>
                   <div class="timeline-body">		
 	
 			  <p class="text-muted">We started with a Forward Neural Network, feeding the same features used by the Logistic Regression model 
-			  and indeed its performance was higher. 
+			  and indeed its performance was higher. Our next model was a FNN that included the training of embedding for 
+			  the Reason for Visit (RFV) codes, performing better than all previous models.
 			  
 			  </p>
                   </div>
@@ -575,11 +560,10 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h5 class="subheading">FNN with text Embeddings</h5>
+                    <h5 class="subheading">Attention Layer for Model Interpretation</h5>
                   </div>
                   <div class="timeline-body">
-     			  <p class="text-muted"> Our next model was a FNN that included the training of embedding for 
-			  the Reason for Visit (RFV) codes, performing better than all previous models.
+     			  <p class="text-muted"> 
 			  
 			  </p>
 			  
@@ -592,16 +576,7 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
           </div>
         </div>
 		
-		 <div class="row ">
-              <div class="col-md-12">
-            		  
-			  <h5 class="service-heading">Deep Learning Model Interpretation</h5>
-			  <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
-          </div>	  
-			 
-          </div>	
+
        
 		 
 		 <div class="row ">
@@ -687,7 +662,20 @@ We found that 39.9% of patients who experienced a critical outcome were correctl
 			</p>
 		  </div>
         </div>
-		
+	 <div class="row top-buffer ">
+          <div class="col-md-2 top-buffer">
+
+          </div>           
+		 
+          <div class="col-md-8 top-buffer ">
+		  <br/>
+		  <br/>
+			 <img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>
+			</div>
+		         <div class="col-md-2">
+
+          </div>   		
+		 </div>	
 		  </div>
     </section>	
 		

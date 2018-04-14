@@ -200,7 +200,7 @@ header.masthead .intro-text {
 
 header.masthead .intro-text .intro-lead-in {
   font-size: 22px;
-  font-style: italic;
+  //font-style: italic;
   line-height: 22px;
   margin-bottom: 25px;
   font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -208,7 +208,7 @@ header.masthead .intro-text .intro-lead-in {
 
 header.masthead .intro-text .intro-heading {
   //font-size: 50px;
-  font-size: 20px;
+  font-size: 40px;
   font-weight: 700;
   //line-height: 50px;
   //line-height: 22px;
@@ -229,7 +229,7 @@ header.masthead .intro-text .intro-heading {
   }
   header.masthead .intro-text .intro-lead-in {
     font-size: 40px;
-    font-style: italic;
+   // font-style: italic;
     line-height: 40px;
     margin-bottom: 25px;
     font-family: 'Droid Serif', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -734,5 +734,17 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
   color: #043077;
   font-size: 18px;
     font-weight: 700;
+}
+
+  #esi-table  td,th{
+   padding: 1px;
+   text-align: left;
+
+   }
+   
+ .img-border-zl{
+    border: 8px solid #000;
+    padding: 0;
+	border-color: #edeff2;
 }
 
