@@ -180,7 +180,7 @@ header.masthead {
   text-align: center;
   //color: white;
   color: #052252;
-  background-image: url("../img/erc.jpg");
+  background-image: url("../img/er4.jpg");
   //background-color: #043077;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -213,7 +213,7 @@ header.masthead .intro-text .intro-heading {
   //line-height: 50px;
   //line-height: 22px;
   line-height: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -242,7 +242,7 @@ header.masthead .intro-text .intro-heading {
     //line-height: 75px;
 	line-height: 40px;
 	margin-top: 30px;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   }
 }
@@ -729,5 +729,10 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 
 .border-image {
   border: 3px solid;
+}
+.intro-ttext {
+  color: #043077;
+  font-size: 16px;
+    font-weight: 700;
 }
 
