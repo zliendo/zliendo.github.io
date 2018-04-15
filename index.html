@@ -303,7 +303,7 @@
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span>
-			   <h4 class="service-heading">Modeling Rationale</h4>
+			   <h4 class="service-heading">Model Interpretability</h4>
 				<p class="text-muted">Neural networks often outperform other types of models, especially with large datasets, 
 				but can be hard for both data science experts and end-users to understand. 
 				In medicine, it is especially important that end-users are able to take advantage 
@@ -616,22 +616,97 @@
           </div>
         </div>
 		
-
+		<div class="row ">
+              <div class="col-md-12">
+            <h5 class="service-heading">ML Model Performance Results</h5>
+          </div>
+        </div>			
        
 		 
 		 <div class="row ">
+           <div class="col-md-1">
+		   </div>
+          <div class="col-md-10">
+				<table id="model-roc" class="table table-striped text-muted" style="font-size:16px">
 
-          <div class="col-md-12">
-            <h5 class="service-heading">ML Model Performance Results</h5>
-            <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit</p>
-          </div>	
+				<thead>
+				  <tr>
+					<th >Model ID</th>				
+					<th> Model for Critical Outcomes</br>
+					(data for 2009)</th>
+					<th>AUC ROC </br>
+					10 Fold Cross Validation</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>LR_BAS</td>					
+					<td  > <span style="color: #043077;" >Baseline Logistic Regression (LR)</span> </br>
+					Matches published paper: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>  
+					</td>
+					<td  style="color: #043077;">83.36% (+/- 0.02%)</td>
+				  </tr>
+				  	<tr>
+					<td>LR_RMH</td>
+					<td >LR_BAS + Additional Features </td>
+					<td >83.93%     (+/- 0.02%)</td>
+				  </tr>
+				  <tr>
+					<td>RF</td>
+					<td >Random Forest </br> Features of LR_RMH into a random forest </td>
+					<td >81.15% (+/- 0.04%)</td>
+				  </tr>
+				  
+				  <tr>
+					<td>FNN</td>
+					<td >Forward Neural Network </br> Features of LR_MH into a Neural Network </td>
+					<td >85.49%     (+/- 0.02%)</td>
+				  </tr>
+				  
+				  <tr>
+				  <td>FNN_TE</td>
+					<td >FNN + Embedding for RVF text </td>
+					<td >85.61% (+/- 1.36%)</td>
+				  </tr>
+				  
+				  <tr>
+				  <td >FNN_TE_ATT</td>
+					<td style="color: #043077;">Forward Neural Network </br> with Text Embeddings (FNN_TE) and Attention Layer</td>
+					<td style="color: #043077;">86.01% (+/- 0.01%)</td>
+				  </tr>
+	
+
+				</tbody>
+			  </table>
+			  
+			  <table id="model-roc" class="table table-striped text-muted" style="font-size:16px">
+
+				<thead>
+				  <tr>
+					<th >Model ID</th>				
+					<th> Model for Resources</br>
+					(data for 2009)</th>
+					<th>AUC ROC </br>
+					10 Fold Cross Validation</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td>FNN_TEA_RS</td>					
+					<td >Forward Neural Network </br> with Text Embeddings and the Attention Layer</td>
+					<td >NN.NN% (+/- N.NN%)</td>
+				  </tr>
+			  		</tbody>
+			  </table>
+	
 
 		  
          </div>
+		     <div class="col-md-1">
+		   </div>
 		 
-	  </div>
+		</div>
+		
     </section>	
 	
 	<!-- Prediction -->
