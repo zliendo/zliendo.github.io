@@ -763,11 +763,13 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
    .roc-scores{
    font-family:monospace;
    font-weight: bold;
+   font-size: 18px;
    }
    
    .score-highlight{
     background-color: #fed136;
 	font-weight:bold;
 	color: #043077; 
+	padding:  8px  0px  8px 0px;
    }
 
