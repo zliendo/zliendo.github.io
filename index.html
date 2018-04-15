@@ -579,10 +579,7 @@
 				  Keras/Tensorflow didn't have an attention layer ready to use, then we implemented one for our model based on formulas 
 				  explained  at <a href="https://arxiv.org/abs/1512.08756" >Raffel et al. </a>. The attention layer learns to determine a set 
 				  of attention weights that represent the relative importance of each feature on a specific record prediction. Each input-record
-				  gets a different set of attention weights.
-				  
-				 
-
+				  gets a different set of attention weights.  
 				  
 				   <!-- All features were translated to hidden vectors with
 				  with the same dimensionality before they entered the attention layer. Then  -->
@@ -603,12 +600,28 @@
                   <div class="timeline-body">	
 	
 			  <p class="text-muted">
-			  Whenever the model predicts outcomes for an input recoord, the model assigns the corresponding attention weights to each feature.
+			  Whenever the model predicts outcomes for an input record, the model assigns the corresponding attention weights to each feature.
 			  We implemented a module to pull these weights from the just executed model and create an importance feature rank, 
-			  which is returned along with the predicted probabiity. 
+			  which is returned along with the predicted probability. 
 
 			  </p>
                   </div>
+                </div>
+              </li>
+			  			 <li class="timeline-inverted">
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/models/att_icon.png" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h5 class="subheading">Model Interpretability</h5>
+                  </div>
+                  <div class="timeline-body">
+     			  <p class="text-muted"> As a result, the FNN model not only provides the predicted probability  
+					but also an attention weight for each feature that allow us to sort them by order of influence on the predicted result.
+			  </p>
+			  
+			  </div>
                 </div>
               </li>
 				       
