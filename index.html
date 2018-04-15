@@ -168,7 +168,7 @@
           </div>
 	  <div class="col-md-4" >   
 	  		           			<p class="text-muted">
-						Emergency Severity Index (ESI): a prioritization tool used by the majority of hospitals in the US, 
+						Emergency Severity Index (ESI): a prioritization tool used by the <a href="https://onlinelibrary.wiley.com/doi/full/10.1111/j.1553-2712.2011.01240.x">majority</a> of hospitals in the US, 
 			  rating patients by severity of condition and resources needed</p>
 
 			<table id="esi-table" class="table table-striped text-muted" style="font-size:12px">
@@ -304,10 +304,13 @@
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span>
 			   <h4 class="service-heading">Modeling Rationale</h4>
-<p class="text-muted">Neural networks often outperform other types of models, especially with large datasets, 
-but can be hard for both data science experts and end-users to understand. 
-IDANN addresses this by including an attention layer, which ranks the 
-importance of the predictors and the embedded reasons for visit.</p>
+				<p class="text-muted">Neural networks often outperform other types of models, especially with large datasets, 
+				but can be hard for both data science experts and end-users to understand. 
+				In medicine, it is especially important that end-users are able to take advantage 
+				of machine learning tools in concert with their own expertise. 
+				IDANN addresses this by including an attention layer, which ranks 
+				the importance of the predictors and the embedded reasons for visit
+				</p>
 			</div>
         </div>
 		
@@ -317,13 +320,11 @@ importance of the predictors and the embedded reasons for visit.</p>
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
             </span>
-             <h4 class="service-heading">GUI vizualizations</h4>
-<p class="text-muted">In medicine, it is especially important that end-users are able to take advantage of machine learning tools 
-in concert with their own expertise. IDANN uses intuitive visualizations to provide concise, 
-easy-to-follow explanations of the model’s recommendation. With these visualizations, 
-care providers can gain confidence in IDANN's predictions, 
-and weigh the relative impact of different predictors for each patient. 
-These visualizations are made possible by the inclusion of the attention layer</p>
+             <h4 class="service-heading">GUI visualizations</h4>
+				<p class="text-muted">IDANN uses intuitive visualizations to provide concise, easy-to-follow explanations 
+				of the model’s recommendation. With these visualizations, care providers can gain 
+				confidence in IDANN's predictions, and weigh the relative impact of different predictors for each patient. 
+				These visualizations are made possible by the inclusion of the attention layer.</p>
 			</div>
           <div class="col-md-6">
             <span class="fa-stack fa-4x">
@@ -332,7 +333,8 @@ These visualizations are made possible by the inclusion of the attention layer</
             </span>
             <h4 class="service-heading">API service</h4>
 			<p class="text-muted">IDANN Triage can be embedded in other applications via REST API. 
-This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications</p>
+			This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications. 
+			IDANN visualizations can be also embedded on EHR web pages via a Javascript API.</p>
 
 			</div>
         </div>
