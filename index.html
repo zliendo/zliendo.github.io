@@ -240,7 +240,7 @@
 		 			   <div class="col-md-5 text-right p-5" style="background-color:#e3e4e5;">
 		   &nbsp;</br>
 		   &nbsp;</br>
-			 <h5>Indetifying how critical <br/>a patient is </h5>
+			 <h5>Identifying how critical <br/>a patient is </h5>
 			 </div>		
           <div class="col-md-2 text-center " style="background-color:#e3e4e5;" >
 		  <h5/>Challenge </h5>
@@ -290,13 +290,13 @@
               <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
             </span>
                 <h4 class="service-heading">Machine Learning Model</h4>
-					<ul class="text-muted">
-						<li>Utilizes neural networks for its predictions and pairs them with text embeddings. </li>
-						<li>Relies on data that ER nurses already collect during triage, allowing nurses to leverage the collective wisdom 
-						of thousands of emergency department cases, without disrupting the flow from triage assessment to ESI assignment.</li>
-						<li>Helps avoid triage miscategorization by using deep learning models to jointly predict the risk of critical 
-						outcome and the resources needed for each patient.</li>
-					</ul>
+				<p class="text-muted">	IDANN Triage utilizes neural networks for its predictions and pairs 
+				them with text embeddings and an attention layer for interpretability. 
+				The model relies on data that ER nurses already collect during triage, 
+				allowing nurses to leverage the collective wisdom of thousands 
+				of emergency department cases, without disrupting the flow from triage assessment to ESI assignment. 
+				This tool helps avoid triage miscategorization by using deep learning models to 
+				jointly predict the risk of critical outcome and the resources needed for each patient</p>
 			</div>
           <div class="col-md-6">
             <span class="fa-stack fa-4x">
@@ -304,17 +304,10 @@
               <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
             </span>
 			   <h4 class="service-heading">Modeling Rationale</h4>
-			   <ul class="text-muted">
-			   				<li>In medicine, it is especially important that end-users are able to take advantage of 
-				machine learning tools in concert with their own expertise.</li>
-			<li>Neural networks often outperform other types of models, especially with large datasets, 
-			but can be hard to understand.</li>
-			<li>IDANN addresses this by including an attention layer.</li>
-			<li>The attention layer ranks the importance of the predictors and the embedded reasons for visit.</li>
-				
-			<li>With these importance rankings, care providers can gain more confidence in IDANN's predictions, 
-				and weigh the relative impact of different predictors for each patient.</li>
-        </ul>
+<p class="text-muted">Neural networks often outperform other types of models, especially with large datasets, 
+but can be hard for both data science experts and end-users to understand. 
+IDANN addresses this by including an attention layer, which ranks the 
+importance of the predictors and the embedded reasons for visit.</p>
 			</div>
         </div>
 		
@@ -324,14 +317,13 @@
               <i class="fa fa-circle fa-stack-2x text-primary"></i>
               <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
             </span>
-             <h4 class="service-heading">JS API and vizualizations</h4>
-			 		   <ul class="text-muted">
-
-				<li>IDANN uses intuitive isualizations to provide concise, easy-to-follow explanations of 
-				the model’s recommendation.</li>
-				<li>(placeholder to explain the JS API)</li>
-	
-					</ul>
+             <h4 class="service-heading">GUI vizualizations</h4>
+<p class="text-muted">In medicine, it is especially important that end-users are able to take advantage of machine learning tools 
+in concert with their own expertise. IDANN uses intuitive visualizations to provide concise, 
+easy-to-follow explanations of the model’s recommendation. With these visualizations, 
+care providers can gain confidence in IDANN's predictions, 
+and weigh the relative impact of different predictors for each patient. 
+These visualizations are made possible by the inclusion of the attention layer</p>
 			</div>
           <div class="col-md-6">
             <span class="fa-stack fa-4x">
@@ -339,10 +331,9 @@
               <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
             </span>
             <h4 class="service-heading">API service</h4>
-			   <ul class="text-muted">
-				<li>IDANN Triage can be embedded in other applications via REST API. </li>
-				<li>This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications.</li>
-				<ul>
+			<p class="text-muted">IDANN Triage can be embedded in other applications via REST API. 
+This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications</p>
+
 			</div>
         </div>
 		
