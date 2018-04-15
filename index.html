@@ -641,38 +641,40 @@
 				<tbody>
 				  <tr>
 					<td>LR_BAS</td>					
-					<td  > <span style="color: #043077;" >Baseline Logistic Regression (LR)</span> </br>
+					<td  > <span style="color: #043077;  font-weight: bold;" >Baseline Logistic Regression (LR)</span> </br>
 					Matches published paper: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>  
 					</td>
-					<td  style="color: #043077;">83.36% (+/- 0.02%)</td>
+					<td  >
+					<span class="roc-scores score-highlight"> 83.36% (+/- 0.02%)</span></td>
 				  </tr>
 				  	<tr>
 					<td>LR_RMH</td>
 					<td >LR_BAS + Additional Features </td>
-					<td >83.93%     (+/- 0.02%)</td>
+					<td class=" roc-scores">83.93%     (+/- 0.02%)</td>
 				  </tr>
 				  <tr>
 					<td>RF</td>
 					<td >Random Forest </br> Features of LR_RMH into a random forest </td>
-					<td >81.15% (+/- 0.04%)</td>
+					<td class=" roc-scores">81.15% (+/- 0.04%)</td>
 				  </tr>
 				  
 				  <tr>
 					<td>FNN</td>
 					<td >Forward Neural Network </br> Features of LR_MH into a Neural Network </td>
-					<td >85.49%     (+/- 0.02%)</td>
+					<td class=" roc-scores">85.49%     (+/- 0.02%)</td>
 				  </tr>
 				  
 				  <tr>
 				  <td>FNN_TE</td>
 					<td >FNN + Embedding for RVF text </td>
-					<td >85.61% (+/- 1.36%)</td>
+					<td class=" roc-scores">85.61% (+/- 1.36%)</td>
 				  </tr>
 				  
 				  <tr>
 				  <td >FNN_TE_ATT</td>
-					<td style="color: #043077;">Forward Neural Network </br> with Text Embeddings (FNN_TE) and Attention Layer</td>
-					<td style="color: #043077;">86.01% (+/- 0.01%)</td>
+					<td style="color: #043077;  font-weight: bold;">Forward Neural Network </br> with Text Embeddings (FNN_TE) and Attention Layer</td>
+					<td >
+					<span class="roc-scores score-highlight">86.01% (+/- 0.01%)</span> </td>
 				  </tr>
 	
 
@@ -694,7 +696,7 @@
 				  <tr>
 					<td>FNN_TEA_RS</td>					
 					<td >Forward Neural Network </br> with Text Embeddings and the Attention Layer</td>
-					<td >NN.NN% (+/- N.NN%)</td>
+					<td style=" font-family:monospace;">NN.NN% (+/- N.NN%)</td>
 				  </tr>
 			  		</tbody>
 			  </table>

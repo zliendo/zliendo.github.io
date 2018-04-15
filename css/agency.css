@@ -756,8 +756,18 @@ ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons l
 }
 
   #model-roc  th{
-   background-color: #999999;
+   background-color: #b3b3b5;
    color: white;
-
+   }
+   
+   .roc-scores{
+   font-family:monospace;
+   font-weight: bold;
+   }
+   
+   .score-highlight{
+    background-color: #fed136;
+	font-weight:bold;
+	color: #043077; 
    }
 
