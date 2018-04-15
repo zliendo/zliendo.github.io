@@ -530,12 +530,14 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li {
     min-height: 100px;
-    margin-bottom: 100px;
+    //margin-bottom: 100px;
+	margin-bottom: 50px;
   }
   .timeline > li .timeline-panel {
     float: left;
     width: 41%;
-    padding: 0 20px 20px 30px;
+    //padding: 0 20px 20px 30px;
+	padding: 0 10px 20px 20px;
     text-align: right;
   }
   .timeline > li .timeline-image {
@@ -551,7 +553,8 @@ header.masthead .intro-text .intro-heading {
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     float: right;
-    padding: 0 30px 20px 20px;
+    //padding: 0 30px 20px 20px;
+	padding: 0 20px 20px 10px;
     text-align: left;
   }
 }
@@ -561,7 +564,8 @@ header.masthead .intro-text .intro-heading {
     min-height: 150px;
   }
   .timeline > li .timeline-panel {
-    padding: 0 20px 20px;
+    //padding: 0 20px 20px;
+	padding: 0 10px 20px;
   }
   .timeline > li .timeline-image {
     width: 150px;
@@ -583,7 +587,8 @@ header.masthead .intro-text .intro-heading {
     min-height: 170px;
   }
   .timeline > li .timeline-panel {
-    padding: 0 20px 20px 100px;
+    //padding: 0 20px 20px 100px;
+	padding: 0 20px 5px 60px;
   }
   .timeline > li .timeline-image {
     width: 170px;
@@ -594,8 +599,10 @@ header.masthead .intro-text .intro-heading {
     margin-top: 40px;
   }
   .timeline > li.timeline-inverted > .timeline-panel {
-    padding: 0 100px 20px 20px;
+    //padding: 0 100px 20px 20px;
+	padding: 0 60px 5px 20px;
   }
+  
 }
 
 .team-member {

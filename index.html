@@ -455,10 +455,12 @@
               <div class="col-md-12">
             <h4 class="service-heading">Machine Learning Methods</h4>
 			
-			<p class="text-muted">We used a 10 fold cross validation and area under receiver-operator characteristic curve (AUC ROC)  
-			to measure the performance of all our models. We found that AUC ROC was the metric used by published papers performing predictive 
-			modeling with electronic health records (EHR).  Because the data is imbalance, with most of the samples not resulting on a 
-			critical outcome, we used the class_weight option in all our models which implicitly balanced the data.</p>
+			<p class="text-muted">The area under receiver-operator characteristic curve (AUC ROC) metric has been used by published papers performing predictive 
+			modeling with electronic health records (EHR), therefore it was the metric to use for comparision purposes. We used a 10 fold cross validation 
+			to measure performance on all our models.  Because the data is imbalance, with most of the samples not resulting on a 
+			critical outcome, we used the class_weight option in all our models which implicitly balanced the data. 
+			We implemented our models using Keras with Tensorflow as the backend, in a Google Cloud Platform.</p>
+			<br/>
 				
           </div>	  
 			 
@@ -515,7 +517,7 @@
                   <div class="timeline-body">		
            
 						<p class="text-muted"> Another traditional machine learning model that we tried was a Random forest (RF) which provides a list of feature importance, 
-			 relevant for model interpretation, specially for healthcare providers . The RF model performance was lower than the LR model though. </p>
+			 relevant for model interpretation. The RF model performance was lower than the LR model though. </p>
                   </div>
                 </div>
               </li>
@@ -552,8 +554,8 @@
                   <div class="timeline-body">	
 	
 			  <p class="text-muted">
- Our next model was a FNN that included the training of embedding for 
-			  the Reason for Visit (RFV) codes, performing better than all previous models.
+ Our next model was a FNN that included the training of embeddings for 
+			  the Reason for Visit (RFV) codes, along with the normalized numerical features. This model performed better than all previous models.
 			  </p>
                   </div>
                 </div>
@@ -569,13 +571,46 @@
                   </div>
                   <div class="timeline-body">
      			  <p class="text-muted"> 
+				  Interpretability of our DNN model is essential for its adoption by healthcare communities. 
+				  Therefore we implemented a feature attribution system determined by an entry Attention Layer in our FNN. 
+				  We were inspired by recent studies on healthcare DNN models by 
+				  <a href="https://arxiv.org/abs/1801.07860" > Google, Rajkomar et al.</a>  (Jan 2018),
+				  and  <a href="https://dl.acm.org/citation.cfm?id=3107445">Georgia Tech, Sha et al.</a>  (Aug 2017).  
+				  Keras/Tensorflow didn't have an attention layer ready to use, then we implemented one for our model based on formulas 
+				  explained  at <a href="https://arxiv.org/abs/1512.08756" >Raffel et al. </a>. The attention layer learns to determine a set 
+				  of attention weights that represent the relative importance of each feature on a specific record prediction. Each input-record
+				  gets a different set of attention weights.
+				  
+				 
+
+				  
+				   <!-- All features were translated to hidden vectors with
+				  with the same dimensionality before they entered the attention layer. Then  -->
 			  
 			  </p>
 			  
 			  </div>
                 </div>
               </li>
+			         <li>
+                <div class="timeline-image">
+                  <img class="rounded-circle img-fluid" src="img/models/att3.jpg" alt="">
+                </div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">                   
+                    <h5 class="subheading">Pulling Attention weights </br>during Prediction</h5>
+                  </div>
+                  <div class="timeline-body">	
+	
+			  <p class="text-muted">
+			  Whenever the model predicts outcomes for an input recoord, the model assigns the corresponding attention weights to each feature.
+			  We implemented a module to pull these weights from the just executed model and create an importance feature rank, 
+			  which is returned along with the predicted probabiity. 
 
+			  </p>
+                  </div>
+                </div>
+              </li>
 				       
             </ul>
           </div>
