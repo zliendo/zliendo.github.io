@@ -491,7 +491,7 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h5 class="subheading">Adding New Features</h5>
+                    <h5 class="subheading">LR with additional features</h5>
                   </div>
                   <div class="timeline-body">
                     		     <p class="text-muted">
@@ -515,24 +515,26 @@
                   <div class="timeline-body">		
            
 						<p class="text-muted"> Another traditional machine learning model that we tried was a Random forest (RF) which provides a list of feature importance, 
-			 relevant for model interpretation. The RF model performance was lower than the LR model though. </p>
+			 relevant for model interpretation, specially for healthcare providers . The RF model performance was lower than the LR model though. </p>
                   </div>
                 </div>
               </li>
 			  
 			 <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/models/performance.png" alt="">
+                  <img class="rounded-circle img-fluid" src="img/models/FNN.png" alt="">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
-                    <h5 class="subheading">How about Deep Learning?</h5>
+                    <h5 class="subheading">Forward Neural Network (FNN)</h5>
                   </div>
                   <div class="timeline-body">
          		  <p class="text-muted">
-			 Considering that medical data is not linearly separable and Logistic Regression cannot handle well this type of data, 
-			 we implemented Deep Neural Networks (DNN). It is well known that DNN perform better with enough data for training 
-			 and we thought that we had enough data to try. 
+				  			 Considering that medical data is not linearly separable and LR cannot handle non-linearities, 
+			 we implemented Deep Neural Networks (DNN); which could perform better with enough data for training.
+			  We started with a Forward Neural Network, feeding the same features used by the LR model 
+			  and indeed its performance was higher. 
+
 			  </p>
 			  
 			  </div>
@@ -541,18 +543,17 @@
 			  
 			         <li>
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/models/FNN.png" alt="">
+                  <img class="rounded-circle img-fluid" src="img/models/embeddings.png" alt="">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">                   
-                    <h5 class="subheading">Forward Neural Network (FNN) with text Embeddings</h5>
+                    <h5 class="subheading">FNN with text Embeddings</h5>
                   </div>
-                  <div class="timeline-body">		
+                  <div class="timeline-body">	
 	
-			  <p class="text-muted">We started with a Forward Neural Network, feeding the same features used by the Logistic Regression model 
-			  and indeed its performance was higher. Our next model was a FNN that included the training of embedding for 
+			  <p class="text-muted">
+ Our next model was a FNN that included the training of embedding for 
 			  the Reason for Visit (RFV) codes, performing better than all previous models.
-			  
 			  </p>
                   </div>
                 </div>
@@ -560,7 +561,7 @@
 			  
 			 <li class="timeline-inverted">
                 <div class="timeline-image">
-                  <img class="rounded-circle img-fluid" src="img/models/embeddings.png" alt="">
+                  <img class="rounded-circle img-fluid" src="img/models/att.jpg" alt="">
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">
@@ -575,7 +576,7 @@
                 </div>
               </li>
 
-	
+				       
             </ul>
           </div>
         </div>
