@@ -303,7 +303,8 @@
 		     <h5>Outcome variables </h5>
 		       <p class="text-muted">To calculate the Critical Outcome variable, we collapsed several patient outcomes into one binary variable: 
 			any patient an outcome of death, admittance to ICU, OR, or cardiac catheterization, was considered to have experienced a 
-			critical outcome. This represented about 7.1% of the total dataset, which we accounted for with weighted modeling techniques.
+			critical outcome. This represented about 7.1% of the total dataset, which we accounted for with weighted modeling techniques.</p>
+			 <p class="text-muted">
 			To calculate Resources, in alignment with the definition outline by the ESI, we calculated the total resources required for each patient,
 			among diagnostic methods and procedures available in the dataset. Ultimately, this resulted in patients requiring 0, 1, or ≥2 resources.</p>
 		 
@@ -311,15 +312,11 @@
 		  
 		  <!-- Machine Learning Methods -->
 		 <div class="row ">
-              <div class="col-md-12">
+              <div class="col-md-12 text-center">
             <h4 class="service-heading">Machine Learning Methods</h4>
+			</br>
 			
-			<p class="text-muted">The area under receiver-operator characteristic curve (AUC ROC) metric has been used by published papers performing predictive 
-			modeling with electronic health records (EHR), therefore it was the metric to use for comparision purposes. We used a 10 fold cross validation 
-			to measure performance on all our models.  Because the data is imbalance, with most of the samples not resulting on a 
-			critical outcome, we used the class_weight option in all our models which implicitly balanced the data. 
-			We implemented our models using Keras with Tensorflow as the backend, in a Google Cloud Platform.</p>
-			<br/>
+
 				
           </div>	  
 			 
@@ -394,7 +391,8 @@
 				  			 Considering that medical data is not linearly separable and LR cannot handle non-linearities, 
 			 we implemented Deep Neural Networks (DNN); which could perform better with enough data for training.
 			  We started with a Forward Neural Network, feeding the same features used by the LR model 
-			  and indeed its performance was higher. 
+			  and indeed its performance was higher. We implemented the NN models using Keras with Tensorflow as the backend, 
+			  in a Google Cloud Platform
 
 			  </p>
 			  
@@ -430,15 +428,15 @@
                   </div>
                   <div class="timeline-body">
      			  <p class="text-muted"> 
-				  Interpretability of our DNN model is essential for its adoption by healthcare communities. 
+				  Interpretability of our FNN model is essential for its adoption by healthcare communities. 
 				  Therefore we implemented a feature attribution system determined by an entry Attention Layer in our FNN. 
-				  We were inspired by recent studies on healthcare DNN models by 
+				  We were inspired by recent studies on healthcare DNN models like  
 				  <a href="https://arxiv.org/abs/1801.07860" > Google, Rajkomar et al.</a>  (Jan 2018),
 				  and  <a href="https://dl.acm.org/citation.cfm?id=3107445">Georgia Tech, Sha et al.</a>  (Aug 2017).  
 				  Keras/Tensorflow didn't have an attention layer ready to use, then we implemented one for our model based on formulas 
 				  explained  at <a href="https://arxiv.org/abs/1512.08756" >Raffel et al. </a>. The attention layer learns to determine a set 
-				  of attention weights that represent the relative importance of each feature on a specific record prediction. Each input-record
-				  gets a different set of attention weights.  
+				  of weights that represent the relative importance of each feature on a specific record prediction. 
+				  The resulting model not only became interpretable but also gain in performance.
 				  
 				   <!-- All features were translated to hidden vectors with
 				  with the same dimensionality before they entered the attention layer. Then  -->
@@ -488,12 +486,25 @@
           </div>
         </div>
 		
+		
+		<div class="row ">
+              <div class="col-md-12 text-center">
+			<p class="text-muted"> The following hyper-parameters were tuned during training:
+			L2 regularizations, number of layers and hidden units in the NN models, #epochs, optimizers and embedding size. 
+			Because the data is imbalance, with most of the samples not resulting on a 
+			critical outcome, we used the class_weight option in all our models to handle this situation.
+			</p>
+			<br/>
+          </div>
+        </div>
+		
 		<div class="row ">
               <div class="col-md-12 text-center">
             <h5 class="service-heading ">ML Model Performance Results</h5>
-			  <p class="text-muted">
-			The following Results are for the Critical Outcome Model. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit.   </p>
+			<p class="text-muted">All our models were evaluated using a 10 fold cross validation and the area 
+			under receiver-operator characteristic curve (AUC ROC) metric to compare results with previous papers on predicting critical outcomes
+			based on Electronic Health Records (EHR) data. </p>
+			<br/>
           </div>
         </div>			
        
@@ -520,36 +531,36 @@
 					Matches published paper: <a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>  
 					</td>
 					<td  >
-					<span class="roc-scores score-highlight"> 83.36% (+/- 0.02%)</span></td>
+					<span class="roc-scores score-highlight"> 83.36% <span class="rwd-line">(+/- 0.02%)</span></span></td>
 				  </tr>
 				  	<tr>
 					<td>LR_RMH</td>
 					<td >LR_BAS + Additional Features </td>
-					<td class=" roc-scores">83.93%     (+/- 0.02%)</td>
+					<td class=" roc-scores">83.93%   <span class="rwd-line">  (+/- 0.02%)</span></td>
 				  </tr>
 				  <tr>
 					<td>RF</td>
 					<td >Random Forest </br> Features of LR_RMH into a random forest </td>
-					<td class=" roc-scores">81.15% (+/- 0.04%)</td>
+					<td class=" roc-scores">81.15% <span class="rwd-line">(+/- 0.04%)</span></td>
 				  </tr>
 				  
 				  <tr>
 					<td>FNN</td>
 					<td >Forward Neural Network </br> Features of LR_MH into a Neural Network </td>
-					<td class=" roc-scores">85.49%     (+/- 0.02%)</td>
+					<td class=" roc-scores">85.49%   <span class="rwd-line">  (+/- 0.02%)</span></td>
 				  </tr>
 				  
 				  <tr>
 				  <td>FNN_TE</td>
 					<td >FNN + Embedding for RVF text </td>
-					<td class=" roc-scores">85.61% (+/- 1.36%)</td>
+					<td class=" roc-scores">85.61% <span class="rwd-line">(+/- 1.36%)</span></td>
 				  </tr>
 				  
 				  <tr>
 				  <td >FNN_TE_ATT</td>
 					<td style="color: #043077;  font-weight: bold;">Forward Neural Network </br> with Text Embeddings (FNN_TE) and Attention Layer</td>
 					<td >
-					<span class="roc-scores score-highlight">86.01% (+/- 0.01%)</span> </td>
+					<span class="roc-scores score-highlight">86.01% <span class="rwd-line">(+/- 0.01%)</span></span> </td>
 				  </tr>
 	
 
@@ -595,7 +606,7 @@
 				  <tr>
 					<td>FNN_TEA_RS</td>					
 					<td >Forward Neural Network </br> with Text Embeddings and the Attention Layer</td>
-					<td style=" font-family:monospace;">NN.NN% (+/- N.NN%)</td>
+					<td style=" font-family:monospace;">NN.NN%<span class="rwd-line"> (+/- N.NN%)</span></td>
 				  </tr>
 			  		</tbody>
 			  </table>
