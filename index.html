@@ -338,8 +338,7 @@
 						<p class="text-muted"> Our baseline  was the replication of the Logistic Regression model implemented by 
 						<a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>, 
 						which uses the same data source (CDC) we are using in our model. We replicated features and matched 
-						the AUC ROC reported. 
-						This starting baseline allowed us to confirm we are using the correct fields from the CDC files. </p>
+						the AUC ROC reported, which allowed us to confirm we are using the correct fields from the CDC files. </p>
                   </div>
                 </div>
               </li>
@@ -354,7 +353,7 @@
                   <div class="timeline-body">
                     		     <p class="text-muted">
 			 The next step was adding features that we thought would improve the model performance, features like the   
-			 RFV codes as vectors and some patient medical history available during triage. The LR model performance improved. 
+			 Reason for Visit (RFV) codes as vectors and some patient medical history available during triage. The LR model performance improved. 
 			   			 
 			  </p>
 			  </div>
@@ -372,8 +371,8 @@
                   </div>
                   <div class="timeline-body">		
            
-						<p class="text-muted"> Another traditional machine learning model that we tried was a Random forest (RF) which provides a list of feature importance, 
-			 relevant for model interpretation. The RF model performance was lower than the LR model though. </p>
+						<p class="text-muted"> We also implemented a Random forest (RF) model which provides a list of feature importance, 
+			 relevant for model interpretation. However its performance was lower than the LR model. </p>
                   </div>
                 </div>
               </li>
@@ -389,9 +388,9 @@
                   <div class="timeline-body">
          		  <p class="text-muted">
 				  			 Considering that medical data is not linearly separable and LR cannot handle non-linearities, 
-			 we implemented Deep Neural Networks (DNN); which could perform better with enough data for training.
+			 we implemented Deep Neural Networks; which could perform better with enough data for training.
 			  We started with a Forward Neural Network, feeding the same features used by the LR model 
-			  and indeed its performance was higher. We implemented the NN models using Keras with Tensorflow as the backend, 
+			  and indeed its performance was higher. We implemented NN models using Keras with Tensorflow as the backend 
 			  in a Google Cloud Platform
 
 			  </p>
@@ -406,13 +405,12 @@
                 </div>
                 <div class="timeline-panel">
                   <div class="timeline-heading">                   
-                    <h5 class="subheading">FNN with text Embeddings</h5>
+                    <h5 class="subheading">FNN with Embeddings for RFV text</h5>
                   </div>
                   <div class="timeline-body">	
 	
 			  <p class="text-muted">
- Our next model was a FNN that included the training of embeddings for 
-			  the Reason for Visit (RFV) codes, along with the normalized numerical features. This model performed better than all previous models.
+				Our next model was a FNN that trained embeddings for the Reason for Visit (RFV) textual descriptions, along with the normalized numerical features. This model performed better than all previous models.
 			  </p>
                   </div>
                 </div>
@@ -436,7 +434,7 @@
 				  Keras/Tensorflow didn't have an attention layer ready to use, then we implemented one for our model based on formulas 
 				  explained  at <a href="https://arxiv.org/abs/1512.08756" >Raffel et al. </a>. The attention layer learns to determine a set 
 				  of weights that represent the relative importance of each feature on a specific record prediction. 
-				  The resulting model not only became interpretable but also gain in performance.
+				  The resulting model not only became interpretable but also gain in performance!.
 				  
 				   <!-- All features were translated to hidden vectors with
 				  with the same dimensionality before they entered the attention layer. Then  -->
@@ -488,9 +486,10 @@
 		
 		
 		<div class="row ">
-              <div class="col-md-12 text-center">
+              <div class="col-md-12 ">
 			<p class="text-muted"> The following hyper-parameters were tuned during training:
-			L2 regularizations, number of layers and hidden units in the NN models, #epochs, optimizers and embedding size. 
+			L2 regularizations, number of layers and hidden units in the NN models, #epochs, optimizers and embedding size.
+			The nadam optimizer was used to handle plateaus which our models run into during stochastic gradient descent. 
 			Because the data is imbalance, with most of the samples not resulting on a 
 			critical outcome, we used the class_weight option in all our models to handle this situation.
 			</p>
@@ -499,8 +498,8 @@
         </div>
 		
 		<div class="row ">
-              <div class="col-md-12 text-center">
-            <h5 class="service-heading ">ML Model Performance Results</h5>
+              <div class="col-md-12 ">
+            <h5 class="service-heading text-center ">ML Model Performance Results</h5>
 			<p class="text-muted">All our models were evaluated using a 10 fold cross validation and the area 
 			under receiver-operator characteristic curve (AUC ROC) metric to compare results with previous papers on predicting critical outcomes
 			based on Electronic Health Records (EHR) data. </p>
