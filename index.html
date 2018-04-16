@@ -53,7 +53,7 @@
             </li>
 			
 			<li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#prediction">ESI Prediction</a>
+              <a class="nav-link js-scroll-trigger" href="#esi">ESI</a>
             </li>
 			
 			<li class="nav-item">
@@ -496,7 +496,7 @@
 			<br/>
           </div>
         </div>
-		
+		<!-- ML Model Performance Results -->
 		<div class="row ">
               <div class="col-md-12 ">
             <h5 class="service-heading text-center ">ML Model Performance Results</h5>
@@ -619,12 +619,12 @@
 		
     </section>	
 	
-	<!-- Prediction -->
-    <section id="prediction">
+	<!-- ESI Classification -->
+    <section id="esi">
       <div class="container">
         <div class="row">
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase bg-light">ESI Prediction</h2>		
+            <h2 class="section-heading text-uppercase bg-light">ESI Classification</h2>		
 	
             </div>
         </div>
@@ -632,18 +632,23 @@
 		<div class="row">
           <div class="col-md-12">
 		  	   <p class="text-muted">
-			The predictor leverages the trained models to generate an ESI rating and associated supporting data.
-				</p>
-				<p class="text-muted">
-				
 			IDANN follows the official definition of ESI as closely as possible to ensure that its use conforms with established emergency department practices, 
 			thus minimizing the implementation risk and allowing for faster deployment with minimal disruption.
-			
-			</br></br>
-			
-			(note: here we explain how the thresholds were calculated, and compare results from new ESI to old ESI)
-			
-			</p>
+				</p>	
+		  </div>
+        </div>
+		
+		<div class="row">
+          <div class="col-md-6">
+		  	   <p class="text-muted">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, 
+			laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
+				</p>	
+		  </div>
+		    <div class="col-md-6">
+		  	   <p class="text-muted">
+                     (image here)
+				</p>	
 		  </div>
         </div>
 		
@@ -664,35 +669,89 @@
 	
 		<div class="row">
           <div class="col-md-12">
-		    <h5 class="service-heading">REST API</h5>
 		  	   <p class="text-muted">
-		A client application passes a JSON package with all relevant information to the API, 
-		which then executes an instance of the predictor function.
-		The result of the predictor function is then passed back to the API service and ultimately the client application, which will leverage the ESI 
-		as a suggestion and provide visualizations explaining the decision.
+			IDANN Triage provides an API service that can be used to leverage the models currently in use. 
+			This allows the embedding into other applications via REST API. 
+			This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications. 
+			IDANN visualizations can be also embedded on EHR web pages via a Javascript API.
 			
 			</p>
 		  </div>
         </div>
 		
 		<div class="row">
-          <div class="col-md-12">
-		    <h5 class="service-heading">Javascript API</h5>
+          <div class="col-md-6">
 		  	   <p class="text-muted">
-.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit
-			
-			</p>
+				The data flow between the different components is as follows:</p>	
+				<ul class="text-muted">
+				<li>A client application makes a REST post and passes a JSON package with all relevant information to the Service API</li>
+				<li>The API instantiates the predictor function with the appropriate models</li>
+				<li>The predictor leverages the trained models to generate an ESI rating and associated metadata.</li>
+				<li>This data is then passed back to the API service</li>
+				<li>Ultimately the client application will leverage the ESI assignment and ... 
+				(note: It would be good to mention here that the client application (EHR) receiving the JSON may decide to develop their own visualization
+				to render the values on the JSON received, OR they can use the JS API that we provide, with visualizations ready to use ).</li>
+                </ul>
+				
+		  </div>
+		    <div class="col-md-6">
+		  	   <p class="text-muted">
+                     (image here)
+				</p>	
 		  </div>
         </div>
 
 	    <!-- Demo -->		 
 		 <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase bg-light">Demo</h2>
+          <div class="col-lg-12 ">
+             <h3 class="service-heading text-center  ">Demo</h3>
           </div>
         </div>
+				<div class="row">
+	
+          <div class="col-md-12">
+		  			<h4 class="service-heading text-center  ">REST API</h4>
+			 		  <table id="model-roc" class="table table-striped text-muted border" style="font-size:16px">
+
+				<thead>
+				  <tr>
+					<th >JSON Request</th>				
+					<th> JSON Response
+					</th>
+				  </tr>
+				</thead>
+				<tbody>
+				  <tr>
+					<td class="json-api">
+					[{"VYEAR":2009,"VMONTH":1,"VDAYR":6,
+					"AGE":69,"ARRTIME":412,
+					"WAITTIME":17,"LOV":70,"RESIDNCE":1,
+					"SEX":2,"ETHUN":2,"RACEUN":3,
+					"ARREMS":1,"TEMPF":978,"PULSE":96,"RESPR":20,
+					"BPSYS":146,"BPDIAS":71,
+					"POPCT":98,"ONO2":2,
+					"GCS":-9,"IMMEDR":2,"PAIN":0,.....
+
+		
+					</td>					
+					<td class="json-api">
+					{"co": 0.873719334602356, 
+					"rss": 2, 
+					"esi": 2, 
+					"co_fi": [{"input_value": "1: by ambulance", "featureName": "arrival_model", "attention_weight": 0.023819265887141228}, 
+					{"input_value": "1", "featureName": "Age_61_70_range", "attention_weight": 0.023092569783329964}, 
+					{"input_value": "1", "featureName": "diabetes_indicator", "attention_weight": 0.021896006539463997}, 
+					{"input_value": "1", "featureName": "Reason_Shortness_of_Breath", "attention_weight": 0.021488169208168983}, 
+					{"input_value": "0", "featureName": "Age_18_30_range", "attention_weight": 0.018372077494859695}, 
+					.....
+					</td>
+
+				  </tr>
+			  		</tbody>
+			  </table>
+		  </div>
+        </div>
+		
 		
 			 <div class="row top-buffer ">
           <div class="col-md-2 top-buffer">
@@ -700,9 +759,18 @@
           </div>           
 		 
           <div class="col-md-8 top-buffer ">
+		  			
+		  
 		  <br/>
+		  <h4 class="service-heading text-center  ">JS API</h4>
 		  <br/>
 			 <img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>
+			 
+
+			 
+			 
+			 
+			 
 			</div>
 		         <div class="col-md-2">
 
@@ -741,7 +809,8 @@
 
         <div class="row">
           <div class="col-lg-8 mx-auto text-center">
-            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
+            <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, 
+			laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
           </div>
         </div>
       </div>
