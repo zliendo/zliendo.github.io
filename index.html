@@ -473,20 +473,77 @@
 			IDANN follows the official definition of ESI as closely as possible to ensure that its use conforms with established emergency department practices, 
 			thus minimizing the implementation risk and allowing for faster deployment with minimal disruption.
 				</p>	
+			   <p class="text-muted">	
+				The actual ESI assignment process is two-fold. For ESI 1 and 2, it requires comparing the probability of critical outcome (CO) with a set
+				of optimized thresholds. If the CO thresholds are not met, then the patient is assigned to ESI 3, 4 or 5 based on whether they require
+				two or more resources, one resource, or no resources, respectively.
+				</p>
+				
+					
+		  </div>
+        </div>
+		
+		
+		
+		<div class="row">
+   
+		    <div class="col-md-6">
+		  	   <p class="text-muted">
+                    <img src = "img/new_esi.jpg"   class = "rounded img-fluid" </img></br>
+				</p>	
+		  </div>
+		  <div class="col-md-6">
+					 <p class="text-muted">
+				The thresholds for ESI 1 and 2 are highly dependent on the size of the groups. 
+				We tested various category sizes and ultimately determined that assigning the top 2.5% most critical patients 
+				to ESI 1 and the next 10% to ESI 2 produced the maximum true-positive rate while minimizing the false-negative 
+				rate of critical outcome. At the same time, we ensured that the absolute size of the two combined categories 
+				did not increase for these high-priority, resource-intensive groups (increasing from 7.1% to 12.5% of the total population). 
+				</p>	
+				
+				<p class="text-muted">
+				Specifically, using the above proportions, we were able to set the thresholds at greater than 0.867605 for ESI 1 and between
+				0.672352 and 0.867605 (inc) for ESI 2. These thresholds increased the critical outcome true-positive rate to 56.6% 
+				while decreasing the false-positive rate to 9.1%, from a baseline of 36.5% and 11.4% respectively.
+				</p>
 		  </div>
         </div>
 		
 		<div class="row">
-          <div class="col-md-6">
-		  	   <p class="text-muted">
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, 
-			laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.
-				</p>	
-		  </div>
+   
 		    <div class="col-md-6">
-		  	   <p class="text-muted">
-                     (image here)
-				</p>	
+		  	   
+          		<p class="text-muted text-right">
+					With respect to mortality, the outcome we optimized against, we were able to capture 94 out of 115 cases in these top ESI 
+					categories (81.7%) compared to 74 cases for the baseline (64.3%). Similar improvement was seen for ICU admission--58.8% 
+					compared to 36.0%--but the improvement for OR Catheterization was within the margin of error--24.0% compared to 23.5%, 
+					a difference of a single case. 		
+			
+				</p>
+				<p class="text-muted text-right">				
+				Overall, IDANN’s distribution of these outcomes represents an improvement compared to the original ESI assignment at the 
+				higher end of the ESI scale while also improving differentiation of at the ESI 3-5 ranges. Nonetheless, it is important to 
+				note that while IDANN provides a marked improvement compared to an unassisted triage practitioner, there is still a risk of 
+				potential misclassification, hence ensuring that the user reviews the assignment is critical.
+				</p>
+					
+		  </div>
+		  <div class="col-md-6">	  
+		    	 
+                    <img src = "img/esi_mortality.jpg"   class = "rounded img-fluid" </img></br>			
+		
+		  </div>
+        </div>
+		
+		
+		<div class="row">
+   
+		  <div class="col-md-2">					
+		  </div>
+		  <div class="col-md-8"> 
+            <img src = "img/sandkey.jpg"   class = "rounded img-fluid" </img></br>
+		  </div>
+		  <div class="col-md-2">					
 		  </div>
         </div>
 		
