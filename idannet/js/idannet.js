@@ -211,13 +211,13 @@
 $(document).ready(function(){
    // console.log (idannet_response);
    
-	if(window.parent.readyState === 'complete') {
+	/*if(window.parent.readyState === 'complete') {
 		render_idann_viz(idannet_response, patient_info);
 	} else {
 		$( window.parent ).on( "load", function() { 
 		render_idann_viz(idannet_response, patient_info);		
 		}) 	
-	}
+	}*/
 
 
 });
