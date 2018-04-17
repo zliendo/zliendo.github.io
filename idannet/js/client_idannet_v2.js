@@ -23,7 +23,8 @@ window._sendMessage = function(patient_info, idannet_response) {
 $(document).ready(function(){
       var  myIframe = document.getElementById('idannet_frame');
       	$( myIframe.contentWindow).on( "load", function() { 
-		myIframe.contentWindow.render_idann_viz(myIframe.contentWindow.idannet_response, myIframe.contentWindow.patient_info);		
+		console.log("in parent load");
+		myIframe.contentWindow.render_idann_viz(idannet_response, patient_info);		
 		})
 		
 
