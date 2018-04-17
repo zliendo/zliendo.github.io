@@ -21,11 +21,27 @@ window._sendMessage = function(patient_info, idannet_response) {
 }
 
 $(document).ready(function(){
-      var  myIframe = document.getElementById('idannet_frame');
-      	$( myIframe.contentWindow).on( "load", function() { 
-		console.log("in parent load");
-		myIframe.contentWindow.render_idann_viz(idannet_response, patient_info);		
-		})
+
+        console.log(patient_info_url)
+
+	$.getJSON(patient_info_url, function( patient_data ) {
+		patient_info = patient_data[0]	
+		$.getJSON( idannet_response_url, function( data ) {
+			idannet_response = data;	
+			link_idannet_frame();
+			_sendMessage(patient_info, idannet_response)	;
+
+			  var  myIframe = document.getElementById('idannet_frame');
+			  $( myIframe.contentWindow).on( "load", function() { 
+					console.log("in parent load");
+					myIframe.contentWindow.render_idann_viz(idannet_response, patient_info);		
+				})			
+		})		
+	})	
+
+
+
+
 		
 
 });
