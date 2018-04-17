@@ -919,6 +919,9 @@
 		  // this is an example for one patient 
 		 // here the EHR web page will have the information for a patient
 	        // for demo purposes, we read it from a file, but the EHR application would be making a JSON call to their own services 
+		$.ajaxSetup({
+			async: false
+		});
 		$.getJSON( "sample_data/sample_patient_input.txt", function( patient_data ) {
 			patient_info = patient_data[0]	
 				
