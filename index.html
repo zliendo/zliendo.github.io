@@ -131,186 +131,22 @@
 
     <!-- Product -->
     <section id="product">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase bg-light">Product</h2>
-            <h3 class="section-subheading text-muted">Decrease fatalities and improve outcomes by assisting triage nurses to avoid errors in categorization.</h3>
-          </div>
-        </div>
-		
-	
-		
-		
-		  <div class="row text-center">
-          <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
-            </span>
-                <h4 class="service-heading">Machine Learning Model</h4>
-				<p class="text-muted">	IDANN Triage utilizes neural networks for its predictions and pairs 
-				them with text embeddings and an attention layer for interpretability. 
-				The model relies on data that ER nurses already collect during triage, 
-				allowing nurses to leverage the collective wisdom of thousands 
-				of emergency department cases, without disrupting the flow from triage assessment to ESI assignment. 
-				This tool helps avoid triage miscategorization by using deep learning models to 
-				jointly predict the risk of critical outcome and the resources needed for each patient</p>
-			</div>
-          <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-search-plus fa-stack-1x fa-inverse"></i>
-            </span>
-			   <h4 class="service-heading">Model Interpretability</h4>
-				<p class="text-muted">Neural networks often outperform other types of models, especially with large datasets, 
-				but can be hard for both data science experts and end-users to understand. 
-				In medicine, it is especially important that end-users are able to take advantage 
-				of machine learning tools in concert with their own expertise. 
-				IDANN addresses this by including an attention layer, which ranks 
-				the importance of the predictors and the embedded reasons for visit.
-				</p>
-			</div>
-        </div>
-		
-		  <div class="row text-center">
-          <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-bar-chart fa-stack-1x fa-inverse"></i>
-            </span>
-             <h4 class="service-heading">GUI Visualizations</h4>
-				<p class="text-muted">IDANN uses intuitive visualizations to provide concise, easy-to-follow explanations 
-				of the model’s recommendation. With these visualizations, care providers can gain 
-				confidence in IDANN's predictions, and weigh the relative impact of different predictors for each patient. 
-				These visualizations are made possible by the inclusion of the attention layer.</p>
-			</div>
-          <div class="col-md-6">
-            <span class="fa-stack fa-4x">
-              <i class="fa fa-circle fa-stack-2x text-primary"></i>
-              <i class="fa fa-share-alt fa-stack-1x fa-inverse"></i>
-            </span>
-            <h4 class="service-heading">API Service</h4>
-			<p class="text-muted">IDANN Triage can be embedded in other applications via REST API. 
-			This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications. 
-			IDANN visualizations can be also embedded on EHR web pages via a Javascript API.</p>
-
-			</div>
-        </div>
-		
-	  		 
-		
-		 
-		 
-	  
-      
-      </div>
+  
     </section>
 	
 
-    <!-- Data Sources -->
+
     <section id="model">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase bg-light">Model</h2>
-            </div>
-        </div>
-		  <div class="row">
-          <div class="col-md-12">
-            <h4 class="service-heading">Data Sources</h4>
-            <p class="text-muted">
-			
-			
-			
-			
-            Our modeling data is drawn from the <a href="https://www.cdc.gov/nchs/ahcd/index.htm">National Hospital Ambulatory Medical Care 
-			Survey (NHAMCS)</a>, collected by the Centers for Disease Control (CDC). 
-			
-			The data represented therein are comprised of de-identified health records from 1992-2015, 
-			drawn from a national sample of visits to emergency departments, about 24K records a year.
-			
-			
-			The data are part of routine ED data collection, so any ED could provide the same fields.
-			
-			
-			An independent investigation of the dataset 
-			by <a href="https://www.ncbi.nlm.nih.gov/pubmed/27133736">Dugas et al. (2016) </a>
-			found the data to be complete and representative sample 
-			of <a href="https://www.cdc.gov/nchs/fastats/emergency-department.htm">141.4 million visits per year</a>. 
-			We based our exclusion categories on the categories outlined in Dugas et al.</p>
-
-
-          </div>  
-		</div>
-		
 	
-		  <!-- Data Items and Feature Engineering-->
-		<div class="row ">
-	      <div class="col-md-12">
-            <h4 class="service-heading">Feature Engineering</h4>
-      
-          </div>	
-         </div>
+		<!-- Data Sources and feature engineering -->
+		<div  id="model_a" class="container">
+   		 
+		</div>
 		 
-		 <div class="row">
-		 <div class="col-md-1">
-		 </div>
-          <div class="col-md-10">
-			 <img src = "img/model_data_elements.jpg"  class = "rounded img-fluid"></img></br>
-			 </br>
-			</div>
-		 <div class="col-md-1">
-		 </div>			
-		 </div>
-		 
-
-		 <div class="row ">
-          <div class="col-md-12">
-            <p class="text-muted">Vital signs are categorized by known thresholds of danger, 
-			and normalized due to different scales of measurement. We also grouped the reasons for ED visit (RFV) 
-			into categories that indicate some complaints that are known to be dangerous or high-priority. 
-			These thresholds and categories were based on the descriptions provided in Dugas et al., “An Electronic Emergency Triage System 
-			to Improve Patient Distribution by Critical Outcomes”, 2016. 
-			In addition to the features suggested by Degas et al., we included flags for diabetes, 
-			chronic heart failure, the patient’s metropolitan area, and additional usage of the RFV codes.
- 
-			
-			
-			</p>
-          </div>
-		  </div>	
-			
-		  <div class="row ">
-		      <div class="col-md-4 ">   
-                <img src = "img/RFV.jpg"  class = "rounded img-fluid"></img>	</br>
-			
-		  </div>
-          <div class="col-md-8">
-		 
-		  <h5> Reasons for Visit (RFV) Codes as vectors and embeddings </h5>
-		   <p class="text-muted">
-						 		
-			 A key feature of the RFV codes was that they have a hierarchical coded arrangement; 
-			 we transformed them into vectors in order to capture that hierarchy. 
-			 We additionally translated the RFV codes into their text form, and created text embeddings in order to capture the semantic 
-			 similarities between complaints that would be obvious to a nurse.	 </p>			 
-			
-
-          </div>      
-         </div>
-		 &nbsp;</br>
-		     <h5>Outcome Variables </h5>
-		       <p class="text-muted">To calculate the Critical Outcome variable, we collapsed several patient outcomes into one binary variable: 
-			any patient an outcome of death, admittance to ICU, OR, or cardiac catheterization, was considered to have experienced a 
-			critical outcome. This represented about 7.1% of the total dataset, which we accounted for with weighted modeling techniques.</p>
-			 <p class="text-muted">
-			To calculate Resources, in alignment with the definition outline by the ESI, we calculated the total resources required for each patient,
-			among diagnostic methods and procedures available in the dataset. Ultimately, this resulted in patients requiring 0, 1, or ≥2 resources.</p>
-		 
-		 
+		 <!-- Machine Learning Methods -->
+		 <div class="container">
 		  
-		  <!-- Machine Learning Methods -->
+
 		 <div class="row ">
               <div class="col-md-12 text-center">
             <h4 class="service-heading">Machine Learning Methods</h4>
@@ -912,13 +748,15 @@
 	<script>
 		  
 		$(function(){
-		   $('#challenge').load("challenge.html");   	   
+		$('#challenge').load("challenge.html");  
+		$('#product').load("product.html"); 
+		$('#model_a').load("model_a.html"); 		
 		   
 		});
 	
 	</script> 
 	
-	<!--<script src="idannet/js/client_idannet_v3.js"></script>-->
+
 
   </body>
 
