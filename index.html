@@ -19,6 +19,8 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+	
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
     <!-- Custom styles for this template -->
     <link href="css/agency.css" rel="stylesheet">
@@ -523,10 +525,10 @@
 				<li>A client application makes a REST post and passes a JSON package with all relevant information to the Service API</li>
 				<li>The API instantiates the predictor function with the appropriate models</li>
 				<li>The predictor leverages the trained models to generate an ESI rating and associated metadata.</li>
-				<li>This data is then passed back to the API service</li>
-				<li>Ultimately the client application will leverage the ESI assignment and ... 
-				(note: It would be good to mention here that the client application (EHR) receiving the JSON may decide to develop their own visualization
-				to render the values on the JSON received, OR they can use the JS API that we provide, with visualizations ready to use ).</li>
+				<li>This data is then passed back to the API service in JSON format</li>
+				<li>The client application could to create their own visualizations based on the JSON information provided by the REST api,
+				or it could use IDANN JS API that has built in ready to use visualizations. </li>
+				<li>Ultimately the client application will leverage the ESI assignment</li>
                 </ul>
 				
 		  </div>
@@ -542,9 +544,9 @@
           <div class="col-lg-12 ">
              <h3 class="service-heading text-center  ">Demo</h3>
           </div>
-        </div>
-				<div class="row">
-	
+        </div>		
+		
+		  <div class="row">	
           <div class="col-md-12">
 		  			<h4 class="service-heading text-center  ">REST API</h4>
 			 		  <table id="model-roc" class="table table-striped text-muted border" style="font-size:16px">
@@ -588,7 +590,25 @@
 		  </div>
         </div>
 		
-		 <!-- JS API -->	
+		 <!-- JS API -->
+
+		<div class="row">
+          <div class="col-lg-12 ">
+             <h3 class="service-heading text-center  ">Demo</h3>
+			 		  <h4 class="service-heading text-center  ">JS API</h4>
+		  
+		  <div  style="background-color: #e6e6e6; color:black ">
+		  <code style=" color:black " >
+		  
+		  &lt;!-- HTML code embedding IDANN viz in the Client web page --&gt;  </code> </br>
+		    <code style=" color:black ">
+		  &lt;iframe src="idannet/idannet.html" style="height:900px;width:800px;" align="center" &gt;
+		  &lt;/iframe &gt;	
+		  
+		  </code> 
+		  </div>
+          </div>
+        </div>			 
 		<div class="row top-buffer ">
           <div class="col-md-2 top-buffer">
 
@@ -596,11 +616,11 @@
 		 
           <div class="col-md-8 top-buffer ">		  
 		  <br/>
-		  <h4 class="service-heading text-center  ">JS API</h4>
+
 		  <br/>
 			 <!--<img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>	-->
 			<!-- This is embedding the viz created by the JS API -->
-			<iframe src="idannet/idannet.html" style="height:900px;width:800px;" id="idannet_frame" ></iframe>			 
+			<iframe src="idannet/idannet.html" style="height:900px;width:800px;"  align="center" ></iframe>			 
 			</br>	
 			&nbsp;</br>	
 			&nbsp;</br>	
