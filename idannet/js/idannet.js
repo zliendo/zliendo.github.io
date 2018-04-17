@@ -207,9 +207,26 @@
 		
    }; // end of function
  
-
 $(document).ready(function(){
-   // console.log (idannet_response);
+
+       $.getJSON('config.json', function( url_data ) {
+	   console.log(url_data);
+	   patient_info_url = url_data.patient_info_url;
+	   idannet_response_url =  url_data.idannet_response_url;   
+
+	$.getJSON(patient_info_url, function( patient_data ) {
+		patient_info = patient_data[0]	
+		$.getJSON( idannet_response_url, function( data ) {
+			idannet_response = data;	
+			render_idann_viz(idannet_response, patient_info);
+	
+		})		
+	})
+	
+	})
+})	
+	
+/*   // console.log (idannet_response);
    
 	if(window.parent.readyState!= 'complete') {
 		//render_idann_viz(idannet_response, patient_info);
@@ -220,4 +237,4 @@ $(document).ready(function(){
 	}
 
 
-});
+});*/
