@@ -210,7 +210,9 @@
 
 $(document).ready(function(){
    // console.log (idannet_response);
+	$( window.parent ).on( "load", function() { 
+	render_idann_viz(idannet_response, patient_info);
+	}) 
 
-   render_idann_viz(idannet_response, patient_info);
 
 });
