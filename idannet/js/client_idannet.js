@@ -20,6 +20,15 @@ window._sendMessage = function(patient_info, idannet_response) {
     myIframe.contentWindow.postMessage(JSON.stringify( info), '*');
 }
 
+$(document).ready(function(){
+      var  myIframe = document.getElementById('idannet_frame');
+      	$( myIframe.contentWindow).on( "load", function() { 
+		myIframe.contentWindow.render_idann_viz(myIframe.contentWindow.idannet_response, myIframe.contentWindow.patient_info);		
+		})
+		
+
+});
+
 
 
 
