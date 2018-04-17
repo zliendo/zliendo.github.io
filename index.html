@@ -925,6 +925,7 @@
 			// here the EHR web page will make a remote  call to the IDANNET server, sending the patient_info JSON
 			// and receiving a JSON with the prediction 
 			// for just rendering the visualization layout, we call data from a file instead 
+			// but the JSON call below can be replaced with a call to the server
 			$.getJSON( "sample_data/sample_patient_result.txt", function( data ) {
 				idannet_response = data;	
 				link_idannet_frame();
