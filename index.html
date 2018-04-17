@@ -762,7 +762,9 @@
 		  <br/>
 		  <h4 class="service-heading text-center  ">JS API</h4>
 		  <br/>
-			 <img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>		
+			 <!--<img src = "img/idann_viz.jpg"  class = "rounded img-fluid border-image "></img>	-->
+			<!-- This is embedding the viz created by the JS API -->
+			<iframe src="idannet/idannet.html" style="height:900px;width:800px;" id="idannet_frame" ></iframe>			 
 			</br>	
 			&nbsp;</br>	
 			&nbsp;</br>	
@@ -905,10 +907,34 @@
     <!-- Custom scripts for this template -->
     <script src="js/agency.min.js"></script>
 	
+	<script src="idannet/js/client_idannet.js"></script>
+	
 	<script>
 		$(function(){
 		   $('#challenge').load("challenge.html");
-	
+		   
+		   
+		   // here is the  rendering of the JSON data that follow the format
+		   // input and output to the API service 
+		  // this is an example for one patient 
+		 // here the EHR web page will have the information for a patient
+	        // for demo purposes, we read it from a file, but the EHR application would be making a JSON call to their own services 
+		$.getJSON( "sample_data/sample_patient_input.txt", function( patient_data ) {
+			patient_info = patient_data[0]	
+				
+			// here the EHR web page will make a remote  call to the IDANNET server, sending the patient_info JSON
+			// and receiving a JSON with the prediction 
+			// for just rendering the visualization layout, we call data from a file instead 
+			$.getJSON( "sample_data/sample_patient_result.txt", function( data ) {
+				idannet_response = data;	
+				link_idannet_frame();
+				_sendMessage(patient_info, idannet_response)	;	  
+			})
+		
+		})
+		   
+		   
+		   
 		});
 	
 	</script> 
