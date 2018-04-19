@@ -229,7 +229,7 @@
 			 we implemented Deep Neural Networks; which could perform better with enough data for training.
 			  We started with a Forward Neural Network, feeding the same features used by the LR model 
 			  and indeed its performance was higher. We implemented NN models using Keras with Tensorflow as the backend 
-			  in a Google Cloud Platform
+			  in a Google Cloud Platform.
 
 			  </p>
 			  
@@ -272,7 +272,7 @@
 				  Keras/Tensorflow didn't have an attention layer ready to use, then we implemented one for our model based on formulas 
 				  explained  at <a href="https://arxiv.org/abs/1512.08756" >Raffel et al. </a>. The attention layer learns to determine a set 
 				  of weights that represent the relative importance of each feature on a specific record prediction. 
-				  The resulting model not only became interpretable but also gain in performance!.
+				  The resulting model not only became interpretable, but also gained in performance!
 				  
 				   <!-- All features were translated to hidden vectors with
 				  with the same dimensionality before they entered the attention layer. Then  -->
@@ -563,7 +563,7 @@
 			  				<p class="text-muted ">
 				&nbsp;</br>							
 				Overall, IDANN’s distribution of these outcomes represents an improvement compared to the original ESI assignment at the 
-				higher end of the ESI scale while also improving differentiation of at the ESI 3-5 ranges. .
+				higher end of the ESI scale while also improving differentiation of at the ESI 3-5 ranges.
 				</p>
 		</div>
 		</div>
@@ -641,13 +641,13 @@
 		  	   <p class="text-muted">
 				The data flow between the different components is as follows:</p>	
 				<ul class="text-muted">
-				<li>A client application makes a REST post and passes a JSON package with all relevant information to the Service API</li>
-				<li>The API instantiates the predictor function with the appropriate models</li>
+				<li>A client application makes a REST post and passes a JSON package with all relevant information to the Service API.</li>
+				<li>The API instantiates the predictor function with the appropriate models.</li>
 				<li>The predictor leverages the trained models to generate an ESI rating and associated metadata.</li>
-				<li>This data is then passed back to the API service in JSON format</li>
+				<li>This data is then passed back to the API service in JSON format.</li>
 				<li>The client application could to create their own visualizations based on the JSON information provided by the REST api,
 				or it could use IDANN JS API that has built in ready to use visualizations. </li>
-				<li>Ultimately the client application will leverage the ESI assignment</li>
+				<li>Ultimately the client application will leverage the ESI assignment.</li>
                 </ul>
 				  </div>
  </div>				  
