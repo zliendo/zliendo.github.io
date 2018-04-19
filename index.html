@@ -103,10 +103,10 @@
 			   &nbsp;</br>
 			   		 Improving Emergency Triage through  </br> 
 					 interpretable deep attention neural networks</br>
-					 to predict critical patient outcomes and resources. </span>
+					 to predict critical patient outcomes </br>and resources. </span>
 				</p>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-6">
 		    </div>			  
 		 </div>
 		 
@@ -614,7 +614,7 @@
 		  	   <p class="text-muted">
 			IDANN Triage provides an API service that can be used to leverage the models currently in use. 
 			This allows the embedding into other applications via REST API. 
-			This standard-based and FHIR-compliant service ensures seamless integration with electronic medical record applications. 
+			This standard-based service ensures seamless integration with electronic medical record applications. 
 			IDANN visualizations can be also embedded on EHR web pages via a Javascript API.
 			
 			</p>
@@ -650,11 +650,23 @@
           <div class="col-lg-12 ">
              <h3 class="service-heading text-center  ">Demo</h3>
           </div>
-        </div>		
+        </div>	
+
 		
-		  <div class="row">	
-          <div class="col-md-12">
-		  			<h4 class="service-heading text-center  ">REST API</h4>
+		
+		 <div class="row">	
+             <div class="col-lg-12 "> 		
+		  
+				  <div  class = "text-left" style="background-color: #e6e6e6; color:black  ">
+				  <code style=" color:black ; " >				  
+						response = requests.post('http://NNN.NN.NN.NNN:5000/predict_esi', data=json_data, stream=False)
+				  </code> 
+				  </div>
+				  &nbsp;</br>
+			</div>
+        </div>
+		
+		
 			 		  <table id="model-roc" class="table table-striped text-muted border" style="font-size:16px">
 
 				<thead>
