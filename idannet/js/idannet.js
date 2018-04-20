@@ -210,7 +210,7 @@
 $(document).ready(function(){
 
        $.getJSON('config.json', function( url_data ) {
-	   //console.log(url_data);
+	   console.log(url_data);
 	   patient_info_url = url_data.patient_info_url;
 	   idannet_response_url =  url_data.idannet_response_url;   
 
