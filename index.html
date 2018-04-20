@@ -278,7 +278,7 @@
 				  and  <a href="https://dl.acm.org/citation.cfm?id=3107445">Georgia Tech, Sha et al.</a>  (Aug 2017).  
 				  Keras/Tensorflow didn't have an attention layer ready to use, then we implemented one for our model based on formulas 
 				  explained  at <a href="https://arxiv.org/abs/1512.08756" >Raffel et al. </a>. The attention layer learns to determine a set 
-				  of weights that represent the relative importance of each feature on a specific record prediction. 
+				  of weights that represent the relative importance of each feature on a specific prediction. 
 				  The resulting model not only became interpretable, but also gained in performance!
 				  
 				   <!-- All features were translated to hidden vectors with
@@ -490,13 +490,15 @@
 		<div class="row">
           <div class="col-md-12">
 		  	   <p class="text-muted">
-			IDANN follows the official definition of ESI as closely as possible to ensure that its use conforms with established emergency department practices, 
-			thus minimizing the implementation risk and allowing for faster deployment with minimal disruption.
+					IDANN follows the official definition of ESI as closely as possible to ensure that 
+					its use conforms with established emergency department practices, 
+					thus minimizing the implementation risk and allowing for faster deployment with minimal disruption.
 				</p>	
 			   <p class="text-muted">	
-				The actual ESI assignment process is two-fold. For ESI 1 and 2, it requires comparing the probability of critical outcome (CO) with a set
-				of optimized thresholds. If the CO thresholds are not met, then the patient is assigned to ESI 3, 4 or 5 based on whether they require
-				two or more resources, one resource, or no resources, respectively.
+					The actual ESI assignment process is two-fold. For ESI 1 and 2, it 
+					requires comparing the probability of critical outcome (CO) with a set of optimized thresholds. 
+					If the CO thresholds are not met, then the patient is assigned to 
+					ESI 3, 4 or 5 based on whether they require two or more resources, one resource, or no resources, respectively.
 				</p>
 				
 					
@@ -512,17 +514,18 @@
    
 		    <div class="col-md-5">
 		  	   <p class="text-muted small">
-                    <img src = "img/new_esi.jpg"   class = "rounded img-fluid" </img></br>
-					2009 data
+                    <img src = "img/esi/patients_per_esi_category.png"   class = "rounded img-fluid" </img></br>
+					2010 data
 				</p>	
 		  </div>
 		  <div class="col-md-5">
-					 <p class="text-muted">
+				<p class="text-muted">
 				The thresholds for ESI 1 and 2 are highly dependent on the size of the groups. 
-				We tested various category sizes and ultimately determined that assigning the top 2.5% most critical patients 
-				to ESI 1 and the next 10% to ESI 2 produced the maximum true-positive rate while minimizing the false-negative 
-				rate of critical outcome. At the same time, we ensured that the absolute size of the two combined categories 
-				did not increase for these high-priority, resource-intensive groups (increasing from 7.1% to 12.5% of the total population). 
+				We tested various category sizes and ultimately determined that assigning the top 2.5% most critical patients to ESI 1 
+				and the next 10% to ESI 2 produced the maximum true-positive rate while minimizing the false-negative rate of critical outcome. 
+				At the same time, we ensured that the absolute size of the two combined categories did not increase for these high-priority, 
+				resource-intensive groups. 
+				Specifically, we calculated these thresholds to be 0.8676 or greater for ESI 1 and between 0.6724 and 0.8676 (inclusive) for ESI 2.
 				</p>	
 				
 
@@ -536,14 +539,42 @@
 		
 			<div class="row">
           <div class="col-md-12">
-		  					<p class="text-muted">
-				Specifically, using the above proportions, we were able to set the thresholds at greater than 0.8676 for ESI 1 and between
-				0.6724 and 0.8676 (inc) for ESI 2. These thresholds increased the critical outcome true-positive rate to 56.6% while decreasing 
-				the false-positive rate to 9.1%, from a nurse-assigned rate of 36.5% and 11.4% respectively. </br>
+		  		<p class="text-muted">
+				In order to validate our models and assignment algorithm, we used the data from year 2010 as an 
+				additional test set. 
+				With this data set, which had not been seen by the model, we saw the critical outcome true-positive rate increase from 37.43% 
+				to 50.84% while the false-positive rate decreased from 11.22 to 9.76%, compared to the nurse-assigned rates. 
+				To put this into perspective we capture 37.4% more critical outcomes in our top two tiers. 
+				If we could extend this improvement to the national level, over a million more patients with critical outcomes 
+				would be assigned to ESI 1 and 2.  </br>
 				&nbsp;</br>
 				</p>
 		  </div>
 		  </div>
+		  
+		  		<div class="row style="background-color:#e3e4e5;"">
+				<div class="col-md-5 text-right p-5" style="background-color:#e3e4e5;">
+
+			   &nbsp;</br>
+				 <h5>Testing with 2010 data, </br>
+				 not seen by models during training</h5>
+				 </div>		
+			  <div class="col-md-2 text-center " style="background-color:#e3e4e5;" >
+		
+			  &nbsp;</br>
+			   <img src = "img/challenge2.png"  class = "rounded-circle img-fluid text-center"></img> </br>
+			   &nbsp;</br>
+			  </div>	
+			   <div class="col-md-5 text-left p-5" style="background-color:#e3e4e5;">
+			
+			   &nbsp;</br>
+			   
+			   <h5>Captures 37.4% more critical outcomes, </br>
+			   Over a million at national level </h5>
+			 
+
+				 </div>	
+		</div>	
 		
 		<div class="row">
 		<div class="col-md-1"> 
@@ -552,19 +583,18 @@
 		    <div class="col-md-5">
 		  	   
           		<p class="text-muted text-right">
-					With respect to mortality, the outcome we optimized against, we were able to capture 94 out of 115 cases 
-					in these top ESI categories (81.7%) 
-					compared to 74 cases for the nurse assignments (64.3%). Similar improvement was seen for ICU admission--58.8% 
-					compared to 36.0%--but the improvement for OR Catheterization was within the margin of error--24.0% compared to 23.5%, 
-					a difference of a single case. 		
+				&nbsp; </br> 
+				With respect to mortality, we were able to capture 98 out of 129 cases in these top ESI categories (76.0%) 
+				compared to 81 cases for the nurse assignments (62.8%). Similar improvement was seen for ICU admission--52.3% 
+				compared to 37.0%--but the improvement for OR Catheterization was more modest--29.8% compared to 24.2%.	
 			
 				</p>
 
 					
 		  </div>
 		  <div class="col-md-5 small">	 		    	 
-             <img src = "img/esi_mortality.jpg"   class = "rounded img-fluid" </img></br>
-			2009 data			 
+             <img src = "img/esi/mortality_per_esi_category.png"   class = "rounded img-fluid" </img></br>
+			2010 data			 
 		  </div>
 		  <div class="col-md-1"> 
 			</div>
@@ -574,8 +604,8 @@
 		  <div class="col-md-12">
 			  				<p class="text-muted ">
 				&nbsp;</br>							
-				Overall, IDANN’s distribution of these outcomes represents an improvement compared to the original ESI assignment at the 
-				higher end of the ESI scale while also improving differentiation of at the ESI 3-5 ranges.
+				Overall, IDANN’s distribution of these outcomes represents an improvement compared to the original 
+				ESI assignment at the higher end of the ESI scale while also improving differentiation of at the ESI 3-5 ranges.
 				</p>
 		</div>
 		</div>
@@ -584,8 +614,8 @@
 		  <div class="col-md-2">					
 		  </div>
 		  <div class="col-md-8 small"> 	
-            <img src = "img/co_new_esi.jpg"   class = "rounded img-fluid" </img></br>
-			2009 data
+            <img src = "img/esi/Critical_Outcome_ESI_distribution_.png"   class = "rounded img-fluid" </img></br>
+			2010 data
 		  </div>
 		  <div class="col-md-2">					
 		  </div>
@@ -595,9 +625,8 @@
 		  <div class="col-md-12">
 			  				<p class="text-muted ">
 				&nbsp;</br>							
-                Nonetheless, it is important to 
-				note that while IDANN provides a marked improvement compared to an unassisted triage practitioner, there is still a risk of 
-				potential misclassification, hence ensuring that the user reviews the assignment is critical.
+			Nonetheless, it is important to note that while IDANN provides a marked improvement compared to an unassisted triage practitioner, 
+			there is still a risk of potential misclassification, hence ensuring that the user reviews the assignment is critical.
 				</p>
 		</div>
 		</div>
@@ -608,7 +637,7 @@
 		  </div>
 		  <div class="col-md-8"> 
 	
-            <img src = "img/sandkey.jpg"   class = "rounded img-fluid" </img></br>
+            <img src = "img/esi/sankey_with_critical_outcomes_light.png"   class = "rounded img-fluid" </img></br>
 		  </div>
 		  <div class="col-md-2">					
 		  </div>
@@ -816,7 +845,7 @@
           <div class="col-md-4 ">
 		   <img src = "img/gui3.png"  class = "rounded img-fluid  "></img>
           </div>   
-		  	  <div class="col-md-2">
+		  <div class="col-md-2">
          </div> 
 		</div>
 		 
@@ -834,16 +863,19 @@
           </div>
         </div>
 		<div class="row">
-          <div class="col-lg-12">
+			  <div class="col-md-2">
+         </div>
+          <div class="col-md-10">
             <ul>
 			<li>Closely reviewing false positives and negatives to tune model for better performance.    </li>
-			<li>Continue tuning models when running with data from 2009 to 2015. </br>
-			Overall, we have not seen improvements in performance when adding data from 2010 to 2015.</li>
+			<li>Tuning model hyperparameters systematically and adding more training data. </li>
 			<li>Further validation of visualizations and ESI re-classification with stakeholders in the ED domain.</li>
 
 			
 			</ul>
           </div>
+		  		  <div class="col-md-2">
+         </div>
         </div>
 	      </div>
     </section>	
