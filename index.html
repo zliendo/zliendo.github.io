@@ -340,7 +340,7 @@
               <div class="col-md-12 ">
 			<p class="text-muted"> The following hyper-parameters were tuned during training:
 			L2 regularizations, number of layers and hidden units in the NN models, #epochs, optimizers and embedding size.
-			The nadam optimizer was used to handle plateaus which our models run into during stochastic gradient descent. 
+			The nadam optimizer was used to handle plateaus which our models run into during training. 
 			Because the data is imbalance, with most of the samples not resulting on a 
 			critical outcome, we used the class_weight option in all our models to handle this situation.
 			</p>
@@ -353,7 +353,8 @@
             <h5 class="service-heading text-center ">ML Model Performance Results</h5>
 			<p class="text-muted">All our models were evaluated using a 10-fold cross validation and the area 
 			under receiver-operator characteristic curve (AUC ROC) metric to compare results with previous papers on predicting critical outcomes
-			based on Electronic Health Records (EHR) data. </p>
+			based on Electronic Health Records (EHR) data. Our performance scores already improved the baseline and we believe they can be improved 
+			further with a systematic hyperparameter tuning, adding more training data and reviewing false positives and negatives closely with medical professionals.</p>
 			<br/>
           </div>
         </div>			
