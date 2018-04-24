@@ -210,7 +210,7 @@
 $(document).ready(function(){
 
        $.getJSON('config.json', function( url_data ) {
-           //console.log(url_data);	
+           console.log(url_data);	
 	   patient_info_url = url_data.patient_info_url;
 	   idannet_response_url =  url_data.idannet_response_url;  
 	   //console.log(idannet_response_url);	   
@@ -292,7 +292,7 @@ $(document).ready(function(){
 		}		
 	})  .fail(function( jqxhr, textStatus, error ) {
 			var err = textStatus + ", " + error;
-			console.log( "Request Failed: " + err );
+			console.log( "Request Failed patient_info_url: " + err );
 		});
 	
 	})
